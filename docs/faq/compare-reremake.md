@@ -11,7 +11,7 @@ If you are a Reremake user, you may be confused about the differences between Hi
 
 | Features                                                                                | Reremake                            | Hikari                   |
 | --------------------------------------------------------------------------------------- | ----------------------------------- | ------------------------ |
-| Minecraft version compatibility                                                                 | 1.15+                               | 1.18.2+                    |
+| Minecraft version compatibility                                                         | 1.15+                               | 1.20+                    |
 | Simple interaction                                                                      | ✔️                                   | ✔️                        |
 | Full customize interaction                                                              | ❌                                   | ✔️                        |
 | NBT                                                                                     | ✔️                                   | ✔️                        |
@@ -27,7 +27,7 @@ If you are a Reremake user, you may be confused about the differences between Hi
 | [Item Preview](../modules/shops/shop-basic.md#preview-the-item)                         | ✔️                                   | ✔️                        |
 | [Localization](../modules/localization.md)                                              | ✔️                                   | ✔️                        |
 | Localization client adaptation                                                          | ✔️                                   | ✔️                        |
-| Localization Format                                                                     | MineDown                            | MiniMessage              |
+| Localization Format                                                                     | MineDown                             | MiniMessage              |
 | [Item Find (/qs find)](../modules/shops/shop-search.md)                                 | ✔️                                   | ⚠️                        |
 | Chat Control Panel                                                                      | ✔️                                   | ✔️                        |
 | 1.14+ Signs                                                                             | ✔️                                   | ✔️                        |
@@ -61,7 +61,7 @@ If you are a Reremake user, you may be confused about the differences between Hi
 ## Which one should I use?
 
 Well, it depends on what your needs are.  
-If you have an old server (<1.18.2) instance, Reremake is your only choice.  
+If you have an old server (<1.20) instance, Reremake is your only choice.  
 ~~If you are in China which has GFW interfere, you also should consider Reremake because it doesn't need to load libraries from Global Internet.~~ Solved in 6.0.0.0.  
 
 If none of these applies, give Hikari a try!

@@ -37,7 +37,7 @@ There are risks involved in performing data conversions, so you'd better create 
 
 ### Configure QuickShop-Hikari
 
-Follow the usual steps to set up QuickShop-Hikari and Addon-Reremake-Migrator, making sure that QuickShop-Hikari,  QuickShop-Reremake Addon-Reremake-Migrator are installed on the server at the sasme time.
+Follow the usual steps to set up QuickShop-Hikari and Addon-Reremake-Migrator, making sure that QuickShop-Hikari, QuickShop-Reremake Addon-Reremake-Migrator are installed on the server at the same time.
 
 Afterwards, configure QuickShop-Hikari's database settings. If QuickShop-Hikari and QuickShop-Reremake are using the same MySQL database, **YOU MUST to set a different table prefix for QuickShop-Hikari, otherwise the data for both will be corrupted and the conversion will fail**. *The path of the table prefix in the configuration file is `database.prefix`.*
 
