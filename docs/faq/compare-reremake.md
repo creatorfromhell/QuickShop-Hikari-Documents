@@ -58,7 +58,7 @@ If you are a Reremake user, you may be confused about the differences between Hi
 | Enchantments Filter                                                                     | ❌                                   | ✔️                        |
 | Buy & Sell in single block                                                              | ❌                                   | ❌                        |
 | [Interaction Manager](../modules/interaction)                                           | ❌                                   | ✔️                        |
-| [Freeze Mode](../modules/shop/shops-basic.md#turn-a-shop-to-freeze-mode)                | ❌                                   | ✔️                        |
+| [Freeze Mode](../modules/shops/shop-basic.md#turn-a-shop-to-freeze-mode)                | ❌                                   | ✔️                        |
 | Folia Support                                                                           | ❌                                   | ✔️                        |
 
 ## Which one should I use?
