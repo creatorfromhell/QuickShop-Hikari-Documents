@@ -31,6 +31,15 @@ Click `Shop Mode: Selling [Change]` button, then your shop now is a buying shop!
 | ------------------------------------------------ | ------------------------------------ |
 | ![buying-1](img/click-to-change-buying-mode.png) | ![refill-2](img/buying-shop-now.png) |
 
+## Turn a shop to freeze mode
+
+Right-click the shop info sign, a control panel will pop up at your chat.  
+Click `Freeze mode: ✘ [Toggle]` button, then your shop now is a buying shop!
+
+| Click the `[Toggle]` button                      | Shop freeze mode now                 |
+| ------------------------------------------------ | ------------------------------------ |
+| ![buying-1](img/click-to-change-freeze-mode.png) | ![refill-2](img/freeze-mode-now.png) |
+
 ## Empty the space
 
 Same as Fill the stock, just take items out of shop container, then space will released.

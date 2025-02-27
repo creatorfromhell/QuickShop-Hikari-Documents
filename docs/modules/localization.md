@@ -40,6 +40,8 @@ You can copy the entire content directly, or keep the structure and copy and mod
 
 Translation support [MiniMessage](https://docs.adventure.kyori.net/minimessage/) syntax.
 
+You also may need [MiniMessage web viewer](https://webui.advntr.dev/)
+
 ### Make it work
 
 Save and execute command `/quickshop reload` to make it works.
@@ -76,8 +78,6 @@ enabled-languages:
 ```
 
 Or multiple languages:
-
-For example, to allow `zh-CN` language only on the server, you can set it to:
 
 ```yaml
 enabled-languages:
