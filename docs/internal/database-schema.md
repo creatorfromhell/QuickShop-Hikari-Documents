@@ -24,6 +24,7 @@ A data record only be deleted from the database when no any table references the
 | id              | INT UNSIGNED Primary Key | Auto Increment      | Record ID (aka. `data_id`)                                                                         |
 | owner           | VARCHAR(36) NOT NULL     | N/A                 | The shop owner unique id (aka. UUID)                                                               |
 | item            | TEXT NOT NULL            | N/A                 | [YAML serialized][YAML ItemStack Serialize] [ItemStack][ItemStack] for this shop data entry        |
+| encoded         | TEXT NOT NULL            | N/A                 | Base64 serialized bytearray of an item stack for serialization on the paper player                 |
 | type            | INT NOT NULL             | 0                   | The [shoptype id][ShopType Id], Indicates the store type                                           |
 | currency        | VARCHAR(64)              | NULL                | The currency name for this shop data entry. NULL if using Vault or not supported                   |
 | price           | DECIMAL(32,2) NOT NULL   | N/A                 | The price per stack for this shop data entry                                                       |
