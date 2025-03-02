@@ -8,9 +8,9 @@ QuickShop-Hikari currently supports the multi-currency economy plugin below:
 
 * Any plugin that supports [VaultUnlocked](https://www.spigotmc.org/resources/vaultunlocked.117277/)
 * Currently Known Plugins to use this functionality
-* TheNewEconomy(for item currencies and virtual currencies)
-* PolyConomy(for virtual currencies)
-* LiteEco(for virtual currencies)
+  * TheNewEconomy(for item currencies and virtual currencies)
+  * PolyConomy(for virtual currencies)
+  * LiteEco(for virtual currencies)
 
 ## Enable Multi-Currency support
 
