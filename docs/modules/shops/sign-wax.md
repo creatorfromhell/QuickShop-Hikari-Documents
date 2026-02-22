@@ -59,7 +59,7 @@ To enable or disable sign waxing, edit `config.yml`:
 ```yaml
 shop:
   sign-wax: true
-````
+```
 
 ### true
 
