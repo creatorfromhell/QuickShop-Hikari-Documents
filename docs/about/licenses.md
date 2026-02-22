@@ -1,7 +1,7 @@
 # Licenses
 
-Quickshop-Hikari is dual licensed under [GNU General Public License v3.0][gplv3] and [GNU Affero General Public License v3.0][https://www.gnu.org/licenses/agpl-3.0.html].  
-New contributions will follow the updated license of [GNU Affero General Public License v3.0][https://www.gnu.org/licenses/agpl-3.0.html].
+Quickshop-Hikari is dual licensed under [GNU General Public License v3.0][gplv3] and [GNU Affero General Public License v3.0](https://www.gnu.org/licenses/agpl-3.0.html).  
+New contributions will follow the updated license of [GNU Affero General Public License v3.0](https://www.gnu.org/licenses/agpl-3.0.html).
 
 ## Third-party components
 

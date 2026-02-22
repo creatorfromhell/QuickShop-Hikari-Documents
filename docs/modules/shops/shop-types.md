@@ -74,7 +74,7 @@ Frozen mode is also available via:
 
 ## Custom Shop Types
 
-As of 6.2.x, the system supports extensible shop types internally.
+As of 6.2.0.11, the system supports extensible shop types internally.
 
 While server owners use the built-in types, the system now allows future expansion through addons.
 
