@@ -8,7 +8,7 @@ This page will walk you through the process of installing QuickShop-Hikari on yo
 * [Vault][vault] for bridging the economy system between QuickShop and your economy plugins.
 * For virtual item displays, and per-player localization you need a supported protocol library:
   * [ProtocolLib][plib]
-  * [PacketEvents][https://www.spigotmc.org/resources/packetevents-api.80279/]
+  * [PacketEvents](https://www.spigotmc.org/resources/packetevents-api.80279/)
 * Any Vault compatible economy plugin, such as [XConomy][xconomy], If you have [EssentialsX][essx], it will also works well.
 * A permission management plugin like [LuckPerms][luckperm].
 
@@ -16,7 +16,7 @@ In this document, we assume that you are using the latest version of QuickShop-H
 
 ## Installing dependencies
 
-Before installing QuickShop-Hikari, you should make sure that you have all dependencies installed, including [Vault][vault], [ProtocolLib][plib] or [PacketEvents][https://www.spigotmc.org/resources/packetevents-api.80279/], [XConomy][xconomy] (or [EssentialsX][essx] if you want) and [LuckPerms][luckperm]!
+Before installing QuickShop-Hikari, you should make sure that you have all dependencies installed, including [Vault][vault], [ProtocolLib][plib] or [PacketEvents](https://www.spigotmc.org/resources/packetevents-api.80279/), [XConomy][xconomy] (or [EssentialsX][essx] if you want) and [LuckPerms][luckperm]!
 
 Download the plugins and drop them into `plugins` folder and you're all set!
 
