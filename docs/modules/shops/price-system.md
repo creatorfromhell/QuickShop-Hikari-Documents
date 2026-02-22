@@ -14,7 +14,7 @@ Limiter is disabled by default, you must turn it on before you edit the rules to
 
 ```yaml
 enable: true
-````
+```
 
 ---
 

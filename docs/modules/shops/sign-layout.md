@@ -35,7 +35,7 @@ Sign layout is configured in `config.yml` under:
 
 ```yaml
 layout:
-````
+```
 
 Example default configuration:
 
