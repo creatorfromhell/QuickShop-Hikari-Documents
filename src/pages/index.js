@@ -25,7 +25,7 @@ export default function Home() {
           <header className={styles.hero}>
             <div className={styles.heroLogo}>
               <img
-                src="img/logo.png"
+                src="img/logo.webp"
                 alt="QuickShop Hikari Logo"
                 height="250px"
               />
