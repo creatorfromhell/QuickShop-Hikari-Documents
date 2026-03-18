@@ -25,7 +25,28 @@ const config = {
     defaultLocale: 'en-US',
     //locales: ['af-ZA', 'ar-SA', 'bg-BG', 'ca-ES', 'cs-CZ', 'da-DK', 'de-DE', 'el-GR', 'en-US', 'es-ES', 'fi-FI', 'fr-FR', 'he-IL', 'hi-IN', 'hu-HU', 'it-IT', 'ja-JP', 'ko-KR', 'lt-LT', 'nl-NL', 'no-NO', 'pl-PL', 'pt-BR', 'pt-PT', 'ro-RO', 'ru-RU', 'sr-Cyrl', 'sr-SP', 'sv-SE', 'th-TH', 'tr-TR', 'uk-UA', 'vi-VN', 'zh-CN', 'zh-HK', 'zh-TW'],
     locales: [ 'de-DE', 'en-US', 'ja-JP', 'zh-CN', 'zh-HK', 'zh-TW'],
+    localeConfigs: {
+    'de-DE': {
+      label: 'Deutsch',
+    },
+    'en-US': {
+      label: 'English',
+    },
+    'ja-JP': {
+      label: '日本語',
+    },
+    'zh-CN': {
+      label: '简体中文',
+    },
+    'zh-HK': {
+      label: '繁體中文（中國香港特別行政區）',
+    },
+    'zh-TW': {
+      label: '繁體中文（中國臺灣）',
+    },
   },
+},
+
   markdown: {
     hooks: {
       onBrokenMarkdownLinks: 'warn',
