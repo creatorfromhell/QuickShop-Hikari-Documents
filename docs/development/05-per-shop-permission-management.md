@@ -25,5 +25,5 @@ ShopPermissionManager permManager = internalInstance.getShopPermissionManager();
 permManager.registerPermission(BuiltInShopPermissionGroup.<GROUP_NAME>.getNamespacedNode(), this, "<permission node name here>");
 // for example
 permManager.registerPermission(BuiltInShopPermissionGroup.STAFF.getNamespacedNode(), this, "receive-discord-alert");
-// you need register for everygroup you want to add, there no inheritance
+// Register every group that you want to add; there is no inheritance.
 ```

@@ -20,8 +20,8 @@ To learn more about LuckPerms, read their wiki at [here](https://luckperms.net/w
 
 QuickShop provides a simple permission that allows you to quickly setup permissions, they are:
 
-`quickshop.player` which contains all [sub permission nodes](https://github.com/QuickShop-Community/QuickShop-Hikari/blob/f7b12693d753fa9d2f147238b3afdf0e4030cfa6/quickshop-bukkit/src/main/resources/plugin.yml#L78) that players required.  
-`quickshop.moderator` which includes all [sub permission nodes](https://github.com/QuickShop-Community/QuickShop-Hikari/blob/f7b12693d753fa9d2f147238b3afdf0e4030cfa6/quickshop-bukkit/src/main/resources/plugin.yml#L101) that moderators required.  
+`quickshop.player`, which contains all [sub-permission nodes](https://github.com/QuickShop-Community/QuickShop-Hikari/blob/f7b12693d753fa9d2f147238b3afdf0e4030cfa6/quickshop-bukkit/src/main/resources/plugin.yml#L78) required by players.  
+`quickshop.moderator`, which contains all [sub-permission nodes](https://github.com/QuickShop-Community/QuickShop-Hikari/blob/f7b12693d753fa9d2f147238b3afdf0e4030cfa6/quickshop-bukkit/src/main/resources/plugin.yml#L101) required by moderators.  
 
 The most significant advantage of using Simple Permission is that when a new permission is added to QuickShop, it will be automatically authorized without additional configuration.
 

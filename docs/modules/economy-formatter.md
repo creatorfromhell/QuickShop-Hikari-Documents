@@ -1,6 +1,6 @@
 # Economy Formatter
 
-QuickShop use Economy Formatter to format balance to human readable text.
+QuickShop uses the Economy Formatter to display balances in a human-readable format.
 
 ## Work with Economy plugins
 

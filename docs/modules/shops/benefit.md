@@ -1,6 +1,6 @@
 # Shop Benefits
 
-Shop Benefits feature allow you split your shop reward to multiple players.
+The Shop Benefits feature allows you to split a shop's revenue among multiple players.
 
 ## Add a benefit
 
@@ -28,7 +28,7 @@ Depending on the implementation of different economy plugins, the assignment may
 
 When the amount is too small, rounding may occur due to the implementation of the economy plugin, or decimal precision may be lost such as `2.899999999999999`.
 
-QuickShop-Hikari have a workaround about this, but still, if this problem occurs, please do not report it as a bug, it is expected.
+QuickShop-Hikari includes a workaround for this situation. If the problem still occurs, do not report it as a bug; it is expected behavior.
 
 ## Allow to add offline players
 
@@ -39,9 +39,11 @@ By default, for security, QuickShop-Hikari disallow add offline players into sho
 ```
 
 ### 🆕 Starting in 6.3.0.0 SNAPSHOT 2
+
 Beginning with 6.3.0.0 SNAPSHOT 2 the JVM Startup Flag has been replaced with an entry in config.yml
 
 Use
+
 ```yaml
 shop.allow-offline-benefit: true
 ```

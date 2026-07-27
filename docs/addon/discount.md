@@ -17,13 +17,13 @@ Discount Addon added Discount Code in your QuickShop-Hikari server.
 * **quickshopaddon.discount.create.server_all_shops** *(default: OP)*  
   Permission to create discount code that applied to all shops in your server.
 * **quickshopaddon.discount.create.player_all_shops** *(default: everyone)*  
-  Permission to create discount code that applied to player themself shops.
+  Permission to create a discount code that applies to the player's own shops.
 * **quickshopaddon.discount.create.specific_shops** *(default: everyone)*  
   Permission to create discount code that applied to shops in the code allow list.
 
 ## Create a discount code
 
-To create a discount code, you need use discount command:
+To create a discount code, use the discount command:
 
 ```plain
 /quickshop discount create <code> <code-type> <rate> [max-usage] [threshold] [expired-time]
@@ -41,7 +41,7 @@ Command pretty long, but you have in-game command assistant to help you in your 
 
 ## Install a code
 
-To use a Discount Code, you need install them before purchase shops.
+To use a discount code, install it before purchasing from a shop.
 
 ```plain
 /quickshop discount install <code>
@@ -51,25 +51,25 @@ The installed code will remember during this session.
 
 ## Uninstall a code
 
-To uninstall a Discount Code, you need use command:
+To uninstall a discount code, run:
 
 ```plain
 /quickshop discount uninstall <code>
 ```
 
-## Show details for a installed discount code
+## Show details for an installed discount code
 
-To use `info` subcommand, you can query the code creator, range, remaining usage, expired time, threshold and discount rate.
+Use the `info` subcommand to view the code creator, scope, remaining uses, expiration time, threshold, and discount rate.
 
 ```plain
-/quickshop disount info
+/quickshop discount info
 ```
 
 ![](https://user-images.githubusercontent.com/30802565/208291677-85469f8b-2c34-4563-bb57-619cfe70e105.png)
 
 ## Remove discount code
 
-To remove your a specified discount code, execute command:
+To remove a specific discount code, run:
 
 ```plain
 /quickshop discount remove <code>
@@ -77,14 +77,14 @@ To remove your a specified discount code, execute command:
 
 ## Check if discount code can be applied to specific shop
 
-You need install a discount code first, then you click the shop you want to check, a promote message will show up when you can enjoy the discount in this shop.  
+Install a discount code, then click the shop that you want to check. A prompt appears if the discount is valid for that shop.  
 If code not accepted by target shop, you will also receive a warning message when you click it.  
 
 ![](https://user-images.githubusercontent.com/30802565/208291999-a32277bb-4111-4dde-bcd4-1d5f5b40ce9e.png)
 
 ## Apply the discounting
 
-You need install a discount code first, then purchase a shop that accept your code.  
+Install a discount code, then purchase from a shop that accepts it.  
 Then discount will applied to your purchase, and your remaining count will be consumed.
 
 ![](https://user-images.githubusercontent.com/30802565/208292084-633fe7e1-239c-4b8c-99b2-87fc9e824e1f.png)
@@ -94,7 +94,7 @@ Then discount will applied to your purchase, and your remaining count will be co
 ## Auto Purge Expired Code
 
 An expired discount code will automatically removed while server startup or in 30mins.  
-Before they got purged, players who use a expired code will receive a error message that says the code has been expired.
+Before expired codes are purged, players who try to use one receive an error saying that it has expired.
 
 ## Convert your time
 
@@ -102,7 +102,7 @@ Expired time accepts both Zulu Time format and UNIX Timestamp in seconds format:
 
 ![](https://user-images.githubusercontent.com/30802565/208248088-01b1cbfe-ff79-4448-8a34-7e95324a71e1.png)
 
-There have a such pretty online website can help you convert the time:  
+The following website can help you convert the time:  
 [https://www.unixtimestamp.com/](https://www.unixtimestamp.com/)
 
 For Zulu Time (ISO 8601 Extended) format:

@@ -6,10 +6,10 @@ Can't find where to download the JAR? [Click here](../faq/where-addons-compacts-
 
 :::
 
-This compatibility module allow users using [ItemExpression](../modules/item-expression.md) to select the specific Slimefun item.
+This compatibility module allows users to select a specific Slimefun item using [ItemExpression](../modules/item-expression.md).
 
 ## Usage
 
-```
+```text
 slimefun:<itemid>
 ```

@@ -1,6 +1,6 @@
 # Databases
 
-QuickShop-Hikari support `H2` and `MySQL` two types of databases.
+QuickShop-Hikari supports two database types: `H2` and `MySQL`.
 
 ## Configuration
 
@@ -42,13 +42,13 @@ database:
 
 ## Migrate
 
-If you want to migrate your quickshop data from one type of database to another type, you can export your data then import them.
+To migrate your QuickShop data from one database type to another, export the data and then import it into the new database.
 
-Execute the `/quickshop export` command in console, quickshop will export a zip which include shop datas.
+Run `/quickshop export` in the console. QuickShop will create a ZIP archive containing the shop data.
 
 ![exported data](img/database-export.png)
 
-Stop your database, switch the datasource, and start the server.  
-You may noticed all shops are gone, because new datasources had no data inside, we will restore them from export.
+Stop the server, switch the data source, and start the server again.  
+The shops will initially appear to be missing because the new data source is empty; restore them from the export.
 
-Rename that exported ZIP file to `recovery.zip`, execute `/quickshop recovery` and restart your server, all shops should back.
+Rename the exported ZIP file to `recovery.zip`, run `/quickshop recovery`, and restart the server. All shops should then be restored.

@@ -16,7 +16,6 @@ This addon added a migrator that allow users easily migrate from [QuickShop-Rere
 
 ![preview](img/reremake-migrator.jpg)
 
-
 ## Step by step tutorial
 
 :::info

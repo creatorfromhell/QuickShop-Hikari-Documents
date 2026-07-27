@@ -15,7 +15,7 @@ It provides full transaction transparency, including:
 
 The History interface is part of the GUI system and can be customized inside: `gui.yml`
 
-Reference: 
+Reference:
 
 Localization is handled through: `messages.yml`
 
@@ -137,7 +137,7 @@ You can modify:
 
 All layout settings are controlled in: `gui.yml`
 
-Reference: 
+Reference:
 
 Text and button names support the `lang:` prefix for localization:
 

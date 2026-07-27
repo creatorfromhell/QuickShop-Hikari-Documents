@@ -12,7 +12,7 @@ To enable multi-currency feature, you need to use VaultUnlocked instead of the V
 
 ```yaml
 #What economy provider should QuickShop use?
-#0=Vault/VaultUnlocked - VaultUnlocked supports multi-currency if you economy plugin supports it.
+#0=Vault/VaultUnlocked - VaultUnlocked supports multiple currencies if your economy plugin supports them.
 #DO NOT TOUCH THIS IF YOU DON'T KNOW WHAT IT DOES. ASK FOR SUPPORT BEFORE TOUCHING THIS!
 economy-type: 0
 ```

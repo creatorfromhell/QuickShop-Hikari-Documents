@@ -1,6 +1,6 @@
 # Shop Staff (Inside Control Panel)
 
-# Shop Staff Management
+## Shop Staff Management
 
 Shop Staff allows shop owners to add or remove players who can manage their shop.
 
@@ -52,28 +52,9 @@ This makes it easy to manage large team shops.
 
 ## Configuration
 
-Layout and buttons are configured in:
+Layout and buttons are configured in `gui.yml`.
 
-gui.yml
-
-```
-
-Reference: :contentReference[oaicite:4]{index=4}
-
-Text and button names can use:
-
-```
-
-lang:
-
-```
-
-Pulled from:
-
-messages.yml
-```
-
-Reference: 
+Text and button names can reference entries under `lang:`; the displayed text is loaded from `messages.yml`.
 
 ---
 

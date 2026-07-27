@@ -7,4 +7,3 @@ Addons and Compatibility Modules are released along with the QuickShop-Hikari, Y
 * You get it!
 
 ![img](img/position.jpg)
-

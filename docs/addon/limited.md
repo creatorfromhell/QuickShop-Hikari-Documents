@@ -20,7 +20,7 @@ This restriction does not reset periodically.
 
 Limit player purchases to a maximum of 32 items in this store:
 
-```
+```text
 /quickshop limit set 32
 ```
 
@@ -28,9 +28,9 @@ Limit player purchases to a maximum of 32 items in this store:
 
 This restriction type allows resetting everyone's quota at certain intervals.
 
-Limit players to purchase up to 16 items per month.
+Limit players to purchasing up to 32 items per month:
 
-```
+```text
 /quickshop limit set 32
 /quickshop limit period MONTH
 ```
@@ -41,7 +41,7 @@ Same for days, months and hours.
 
 Available time units:
 
-* ~~SECOND - 1 second~~ DELETED DUE PERFORMANCE IMPACT, all exists and new second rules will update every minute instead
+* ~~SECOND - 1 second~~ REMOVED DUE TO PERFORMANCE IMPACT. All existing and new second-based rules are updated every minute instead.
 * MINUTE - 1 minute
 * HOUR - 1 hour
 * DAY - 1 day
@@ -49,7 +49,7 @@ Available time units:
 * MONTH - 1 month
 * YEAR - 1 year
 
-Due to the limitation of QuickShop-Hikari's calendar timing system, it is impossible to set other values (for example, 3 days)
+Due to a limitation of QuickShop-Hikari's calendar system, it is not possible to set custom intervals (for example, 3 days).
 
 ## Purchase Notice
 
@@ -62,4 +62,3 @@ When a player purchases from a store that has set a limit, the plugin will promp
 When the player exceeds or exhausts the purchase quota, the purchase will be blocked.
 
 ![run-out-of-quota](img/limited_run-out-of-quota.png)
-

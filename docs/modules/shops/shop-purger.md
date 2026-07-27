@@ -17,7 +17,7 @@ purge:
   days: 60
   # At this moment, QuickShop only compatible with Vanilla banning system (e.g Essentials using).
   banned: true
-  # At this moment, QuickShop only compatible with Vanilla OP system, LuckPerms may need add in future.
+  # QuickShop is currently compatible only with the vanilla operator system; LuckPerms support may be added later.
   skip-op: true
   # When shop purged by server, should we return the create-fee back to players?
   return-create-fee: true

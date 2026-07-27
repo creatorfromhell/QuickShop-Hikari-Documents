@@ -6,7 +6,7 @@ Can't find where to download the JAR? [Click here](../faq/where-addons-compacts-
 
 :::
 
-This is a BungeeCord plugin, you need install it within your BungeeCord's plugins folder.
+This is a BungeeCord plugin. Install it in BungeeCord's `plugins` folder.
 
 ## How does it work?
 

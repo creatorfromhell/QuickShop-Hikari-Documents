@@ -1,6 +1,6 @@
 # Stacking Shop
 
-QuickShop allow you sell/buy multiple item in bundles.
+QuickShop allows you to sell or buy multiple items in bundles.
 
 ## Stacking shop
 

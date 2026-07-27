@@ -10,14 +10,14 @@ We use [bStats.org](https://bstats.org/) to collect statistical indicators so th
 
 All data collected will be displayed on this page: [bStats - QuickShop-Hikari](https://bstats.org/plugin/bukkit/QuickShop-Hikari/14281)
 
-### Quit bStats Metrics
+### Disable bStats metrics
 
-To quit bStats metrics, you can disable bstats service in QuickShop-Hikari's configuration:
+To disable bStats metrics, update QuickShop-Hikari's privacy configuration:
 
 ```yaml
-#Privacy Controller allows you turn on/off some options that related to privacy. This is our move towards privacy transparency.
-#By audit all privacy reviewing activities, execute `/quickshop paste` to generate a paste and check `Privacy Logs` section.
-#To out-put from bStats completely, go to /plugins/bStats/config.yml.
+#The Privacy Controller allows you to enable or disable privacy-related options.
+#To audit privacy-related activity, run `/quickshop paste` and check the `Privacy Logs` section.
+#To opt out of bStats completely, open /plugins/bStats/config.yml.
 privacy:
   # Category Control
   type:
@@ -27,12 +27,12 @@ privacy:
     RESEARCH: true
 ```
 
-Note: The collected data won't deleted from bStats, to remove exists data, please contact bStats administrators.  
-Note: We respect your bStats global settings, if you has been disabled bStats in global, we won't send any data to bStats.  
+Note: Previously collected data is not deleted from bStats. Contact the bStats administrators to request its removal.  
+Note: QuickShop respects the global bStats setting. If bStats is disabled globally, QuickShop will not send data to bStats.  
 
 ## Rollbar Error Tracking
 
-We use [Rollbar](https://rollbar.com/) to collect error reports. All errors on your server which related to QuickShop-Hikari will be automatically submit to our Rollbar bin.
+We use [Rollbar](https://rollbar.com/) to collect error reports. Errors related to QuickShop-Hikari may be submitted automatically to our Rollbar project.
 
 You can check Rollbar's Privacy Policy [here](https://docs.rollbar.com/docs/privacy-policy).
 
@@ -50,16 +50,16 @@ Including:
 * Online Mode
 * Your QuickShop-Hikari unique ID
 
-### Regenerate QuickShop-Hikari unique ID
+### Regenerate the QuickShop-Hikari unique ID
 
-While you install QuickShop-Hikari in fresh, the your unique ID will be generated and write into your `config.yml`.  
-The ID does not depend on any other information for calculation and is completely random, It is used in our bug tracking and other scenarios where different QuickShop-Hikari instances need to be identified.  
+When you install QuickShop-Hikari for the first time, a unique ID is generated and written to `config.yml`.  
+The ID is completely random and is not derived from any other information. It is used for bug tracking and other situations in which individual QuickShop-Hikari instances must be distinguished.  
 
 In case you are sure that no addon is using this value, you can remove this from the configuration file so that QuickShop-Hikari will generate a new unique ID.
 
-### Quit Rollbar Error Tracking
+### Disable Rollbar error tracking
 
-To quit Rollbar Error Tracking, you can disable rollbar service in QuickShop-Hikari's configuration:
+To disable Rollbar error tracking, update QuickShop-Hikari's configuration:
 
 ```yaml
 # Should QS be allowed to automatically report errors to the author?
@@ -67,22 +67,22 @@ To quit Rollbar Error Tracking, you can disable rollbar service in QuickShop-Hik
 auto-report-errors: true
 ```
 
-Note: The collected data won't deleted from Rollbar, to remove exists data, please contact QuickShop-Hikari developer.
+Note: Previously collected data is not deleted from Rollbar. Contact a QuickShop-Hikari developer to request its removal.
 
 ## Paste
 
-When you creating a paste by `/quickshop paste` command, you data will upload to [Lucko's Bytebin](https://bytebin.lucko.me/).  
-To avoid data uploading, you can create local paste by using command `/quickshop paste file`, the paste will save to your local disk without uploading.
+When you create a paste with `/quickshop paste`, your data is uploaded to [Lucko's Bytebin](https://bytebin.lucko.me/).  
+To avoid uploading data, create a local paste with `/quickshop paste file`; it will be saved to your local disk instead.
 
-The Paste Viewer hosting on Github Pages, access the uploaded data through CloudFlare Worker.
+The Paste Viewer is hosted on GitHub Pages and accesses uploaded data through a Cloudflare Worker.
 
-While we generating your Paste, we will censor your sensitive data, Don't send your Paste to anyone you don't trust.
+Sensitive data is redacted while the paste is generated. Do not send your paste to anyone you do not trust.
 
 ## Updater
 
-For checking update, QuickShop-Hikari will request CodeMC.io's Nexus for checking updates.  
+To check for updates, QuickShop-Hikari sends a request to CodeMC.io's Nexus service.  
 
-To disable update checker, you can turn it off by adjust the configuration:
+To disable the update checker, adjust the configuration as follows:
 
 ```yaml
 #Should QS be allowed to check for updates?

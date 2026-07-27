@@ -18,7 +18,6 @@ An add-on for the QuickShop Reremake and Hikari spigot plugin. Adds a /finditem 
 * Support for world blacklisting (Shops in blacklisted worlds are ignored in the search result)
 * All messages in the config.yml support hexcodes so you can get a lot creative with colors.
 
-
 ## Integrations:
 
 * Supports PlayerWarps (by Olzie-12) integration. It shows the nearest warp to each shop in the search result GUI.

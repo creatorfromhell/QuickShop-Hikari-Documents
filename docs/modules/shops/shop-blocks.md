@@ -6,7 +6,7 @@ Not only Chests, but also all Containers all supported used for QuickShop contai
 
 ## Configuration
 
-To add or remove shop blocks, you can change the settings in config.yml: 
+To add or remove shop blocks, you can change the settings in config.yml:
 
 ```yaml
 #The list of blocks that can be used to create shops.

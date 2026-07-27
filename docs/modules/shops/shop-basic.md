@@ -11,8 +11,7 @@ Type `10` for price in chat, you will created a shop that selling items for 10$.
 | --------------------------------- | ------------------------------------- |
 | ![ask-price](img/create-shop.png) | ![shop-created](img/shop-created.png) |
 
-Once you setup a quickshop, anyone can left click your shop and purchase with it. 
-
+Once you setup a quickshop, anyone can left click your shop and purchase with it.
 
 ## Fill the stock
 
@@ -66,7 +65,7 @@ To remove your quickshop, you can simple break the shop container, or use Contro
 
 ## Preview the item
 
-To avoid bad player to scam the purchasers, QuickShop allow you to preview the items that shop actually selling/buying.
+To help prevent scams, QuickShop lets players preview the item that a shop is actually buying or selling.
 
 Click the shop, trade panel will pop up, hover your mouse cursor on `[Preview Item]`, the item name and lores will shown up.
 

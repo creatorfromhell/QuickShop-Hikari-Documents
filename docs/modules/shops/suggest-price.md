@@ -2,7 +2,6 @@
 
 This feature provides your players with price suggestions for items of interest on your server by command `/quickshop suggestprice`.
 
-
 ![suggest](./img/suggest-price.png)
 
 To provide price suggestions, there are at least 3 participating stores on the server that must fulfill the following requirements:

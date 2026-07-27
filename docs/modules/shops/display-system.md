@@ -1,6 +1,6 @@
 # Display Item
 
-QuickShop provide a cool feature that let player identify shops item.
+QuickShop provides a display feature that helps players identify the item sold or purchased by a shop.
 
 ## Work Mode
 
@@ -10,16 +10,16 @@ Display Item has one work mode:
 
 ## Real DisplayItem
 
-This work mode has been removed. If you were using it before, QuickShop will be disabled display item globally.
+This mode has been removed. If you previously used it, QuickShop disables display items globally.
 
 ## Virtual DisplayItem
 
-This work mode will send a Item packet to player's client to trick client display a floating item that above the shop container.  
+This mode sends an item packet to the player's client, causing it to display a floating item above the shop container.  
 Player *can* see the item BUT it actually not exists on the server, it won't affect the server performance and more security.
 
 To use this feature, you need to install [ProtocolLib](https://www.spigotmc.org/resources/protocollib.1997/) and set `display-type` to `2`.
 
-If you want to use [PacketEvents](https://modrinth.com/plugin/packetevents) as a Virtual DisplayItem, you need set `display-protocol` to `packetevents`.
+To use [PacketEvents](https://modrinth.com/plugin/packetevents) for virtual display items, set `display-protocol` to `packetevents`.
 
 ## Configuration
 
@@ -65,7 +65,7 @@ You can disable the alert by tweak the settings:
 send-display-item-protection-alert: false
 ```
 
-QuickShop also will check all display items to make sure they are still at the position they should be, and reset, respawn them when need. 
+QuickShop also will check all display items to make sure they are still at the position they should be, and reset, respawn them when need.
 You can tweak the options below the change this:
 
 ```yaml
@@ -80,7 +80,7 @@ You can tweak the options below the change this:
 
 This function is completely a compromise of client render performance, which will greatly increase the pressure on the server, and it is not recommended to use it.
 
-This feature allow you despawn both Real DisplayItem and Virtual DisplayItem when player too far with shops.
+This feature lets you despawn both real and virtual display items when players move too far away from shops.
 
 ```yaml
   #Allow QuickShop to automatically despawn displays when no players are in range of the shop.

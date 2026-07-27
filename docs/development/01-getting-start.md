@@ -6,7 +6,7 @@ This series of articles will help you build extensions for QuickShop-Hikari or i
 
 ## License
 
-QuickShop-Hikari is open source using the [AGPLv3](https://www.gnu.org/licenses/agpl-3.0.html) license and you can always find our source code on [Github](https://github.com/QuickShop-Community/QuickShop-Hikari).  
+QuickShop-Hikari is open-source software licensed under the [AGPLv3](https://www.gnu.org/licenses/agpl-3.0.html). You can find the source code on [GitHub](https://github.com/QuickShop-Community/QuickShop-Hikari).  
 You are free to modify and use any part of QuickShop-Hikari's source code as long as you adhere to the AGPLv3 agreement.
 
 ## 🚧Don't trust Javadoc too much

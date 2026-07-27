@@ -19,7 +19,7 @@ rules: # Rules set
 
 But if I want to limit a Slimefun gadget?
 
-## Create a item reference
+## Create an item reference
 
 Holding the item you want to create a reference for, then execute command `/quickshop lookup create <name>`.
 
