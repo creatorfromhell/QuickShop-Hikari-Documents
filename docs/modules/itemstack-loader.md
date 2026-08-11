@@ -31,15 +31,16 @@ QuickShop will prompt on the console when an error is detected as a result of a 
 Enable the loader workaround by changing the following setting in `config.yml`:
 
 ```yaml
+shop:
+  # Cross-Version Item Loading (Advanced / Risky)
+  # Attempts to load items created on newer Minecraft versions.
+  # WARNING: This may corrupt server or shop data. Always backup first.
   force-load-downgrade-items:
     enable: true
-    #WorkMode
-    #0=Call Bukkit to try to update the ItemStack
-    #1=Call Bukkit to directly load the ItemStack
+    # Work mode:
+    # 0 = Ask Bukkit to update the ItemStack
+    # 1 = Ask Bukkit to load the ItemStack directly
     method: 0
 ```
 
-method = 0 means the ItemStack version will override by current ItemStack version number but -1.
-method = 1 means trick Bukkit the ItemStack version exactly same with current ItemStack version number.
-
-By default, method value is `0`.
+Method `0` asks Bukkit to update the ItemStack version, while method `1` asks Bukkit to load it directly. By default, the value is `0`.

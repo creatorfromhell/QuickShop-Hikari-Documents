@@ -59,15 +59,19 @@ Run `/quickshop debug` in game to enable debug mode. Rejoin the server or change
 If your server is not facing players across the world, or if you want to disable specific languages on your server, you can set it in config.yml.
 
 ```yaml
-#Choose which languages should be enabled
-#Clients using a disabled language will fall back to the game-language option
-#Set to - '*' to enable all available languages
-#The language files are automatically updated through Crowdin OTA; you can contribute translations here:
-#https://crowdin.com/project/qs-hikari
-#To customize a language file, use the language override system:
-#https://quickshop-community.github.io/QuickShop-Hikari-Documents/docs/modules/localization
+# Enable specific languages for players.
+# If a player uses a disabled language, the plugin will fall back to "game-language".
+#
+# Use:
+#   - '*' to enable all available languages.
+#
+# Language files can update automatically via Crowdin OTA:
+#   https://crowdin.com/project/qs-hikari
+#
+# For custom translations, use the language override system:
+#   https://quickshop-community.github.io/QuickShop-Hikari-Documents/docs/modules/localization
 enabled-languages:
-  - '*'
+- '*'
 ```
 
 For example, to allow `zh-CN` language only on the server, you can set it to:
@@ -95,8 +99,9 @@ Although in the vast majority of cases QuickShop-Hikari will not use this option
 The comments in `config.yml` may be outdated.
 
 ```yaml
-#Set it to default will use your system language.
-#You can find the valid language code in your client language settings, like en_us
+# Default language used by the plugin.
+# Set to "default" to use the player's Minecraft client language automatically.
+# Example language code: en_us
 game-language: default
 ```
 

@@ -11,9 +11,11 @@ QuickShop-Hikari currently supports multi-currency economy plugins that support 
 To enable multi-currency feature, you need to use VaultUnlocked instead of the Vault plugin
 
 ```yaml
-#What economy provider should QuickShop use?
-#0=Vault/VaultUnlocked - VaultUnlocked supports multiple currencies if your economy plugin supports them.
-#DO NOT TOUCH THIS IF YOU DON'T KNOW WHAT IT DOES. ASK FOR SUPPORT BEFORE TOUCHING THIS!
+# Economy provider selection.
+# 0 = Vault/VaultUnlocked
+# VaultUnlocked supports multi-currency if your economy plugin supports it.
+#
+# Advanced option—ask for support before changing if unsure.
 economy-type: 0
 ```
 
@@ -22,9 +24,9 @@ economy-type: 0
 You need to set a currency for default usage (like new shop default currency),and configure it in config.yml:
 
 ```yaml
-# The currency used to create shops.
-# Set this to "" to use default currency.
-# Only required if you use multiple currencies.
+# Currency used when creating shops.
+# Set to "" to use the default currency.
+# Only required for multi-currency setups.
 currency: ''
 ```
 
@@ -33,11 +35,12 @@ currency: ''
 You can set a alternate for symbols, QuickShop-Hikari will use alternate for specific currencies in text.
 
 ```yaml
-  # This setting is for multi-currency setups.
-  # If nothing matches in this list, it falls back to the name of currency itself.
-  alternate-currency-symbol-list:
-  - USD;$
-  - CNY;￥
+# Multi-currency symbol mapping:
+# Format: <currencyName>;<symbol>
+# If no match, the currency name itself is used.
+alternate-currency-symbol-list:
+- USD;$
+- CNY;￥
 ```
 
 ## Change the currency for shops

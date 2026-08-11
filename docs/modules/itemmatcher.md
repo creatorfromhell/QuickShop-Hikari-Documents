@@ -11,23 +11,34 @@ If this feature is misconfigured, it will cause the plugin to stop working, and 
 
 ## Matchers
 
-QuickShop-Hikari supports two of matchers by default:
+QuickShop-Hikari supports several matcher modes by default:
 
 * Bukkit Item Matcher (default)
 * QuickShop Item Matcher
+* Strict Bukkit Matcher
+* Modern Matcher
 
-You can change the matcher by tweak the setting:
+You can change the matcher by tweaking the setting:
 
 ```yaml
 matcher:
-  #Matcher type
-  #0= QuickShop item matcher with configurable options below.
-  #1= Bukkit item matcher, can be more accurate.
+  # Matcher type:
+  # 0 = QuickShop matcher (configurable below)
+  # 1 = Bukkit matcher
+  # 2 = Strict Bukkit matcher (equals method)
+  # 3 = Modern matcher
   work-type: 1
+
+  # Ignore stack size when matching items.
+  # Recommended for shop matching.
+  ignore-count: true
+
+  # Require material/type to match (strongly recommended).
+  check-material: true
 ```
 
 By default, QuickShop-Hikari will use Bukkit's matcher to provide the best cross-compatibility.  
-But still, you can toggle to QuickShop Item Matcher if you need to customize the comparing or running QuickShop on the server jar which have bug affect the Bukkit comparing system.
+But still, you can toggle to QuickShop Item Matcher if you need to customize the comparison behavior or run QuickShop on a server jar that has issues with the Bukkit comparison system.
 
 ## Customize the metadata comparing
 
@@ -41,48 +52,125 @@ Keep using Bukkit Item Matcher if not necessary.
 
 :::
 
-You can specific to enable or disable the some checks by tweak the configuration.
+You can specifically enable or disable the relevant checks by tweaking the configuration.
 
 ```yaml
 matcher:
-  #For Item (Only works under QuickShop ItemMatcher)
+  # Compare ONLY enabled components below.
+  #
+  # DIRECT keys map 1:1 to DataComponentTypeKeys.<KEY>
+  # GROUP keys expand into multiple underlying component keys
+  components:
+    # Compare durability/damage.
+    DAMAGE: true
+
+    # Compare custom display name.
+    CUSTOM_NAME: true
+
+    # Compare lore.
+    LORE: true
+
+    # Compare CustomModelData.
+    CUSTOM_MODEL_DATA: true
+
+    # Compare enchantments.
+    ENCHANTMENTS: true
+
+    # Compare stored enchantments (enchanted books).
+    STORED_ENCHANTMENTS: true
+
+    # Compare attribute modifiers.
+    ATTRIBUTE_MODIFIERS: true
+
+    # Compare unbreakable flag.
+    UNBREAKABLE: true
+
+    # Compare armor trim.
+    TRIM: true
+
+    # Compare dyed color.
+    DYED_COLOR: true
+
+    # Compare tooltip hide flags.
+    HIDE_ADDITIONAL_TOOLTIP: true
+
+    # Compare enchantment glint override.
+    ENCHANTMENT_GLINT_OVERRIDE: true
+
+    # Compare potion contents.
+    POTION_CONTENTS: true
+
+    # Compare potion duration scaling.
+    POTION_DURATION_SCALE: true
+
+    # Compare book content (written & writable).
+    BOOKS: true
+
+    # Compare banner patterns.
+    BANNER: true
+
+    # Compare skull profile/texture.
+    SKULL: true
+
+    # Compare firework metadata (rockets + stars).
+    FIREWORK: true
+
+    # Compare map metadata.
+    MAP: true
+
+    # Compare leather armor dye color.
+    LEATHER_ARMOR: true
+
+    # Compare fish bucket entity data.
+    FISH_BUCKET: true
+
+    # Compare suspicious stew effects.
+    SUSPICIOUS_STEW: true
+
+    # Compare shulker box contents.
+    SHULKER_BOX: true
+
+    # Compare bundle contents.
+    BUNDLE: true
+
+  # For Item (Only works under QuickShop ItemMatcher)
   item:
-    #Should the Plugin check the item damage?
+    # Should the Plugin check the item damage?
     damage: true
-    #Should the Plugin check the item repair cost?
+    # Should the Plugin check the item repair cost?
     repaircost: false
-    #Should the Plugin check the item display name?
+    # Should the Plugin check the item display name?
     displayname: true
-    #Should the Plugin check the item lores?
+    # Should the Plugin check the item lores?
     lores: true
-    #Should the Plugin check the item enchs?
+    # Should the Plugin check the item enchs?
     enchs: true
-    #Should the Plugin check the item potions?
+    # Should the Plugin check the item potions?
     potions: true
-    #Should the Plugin check the item attributes?
+    # Should the Plugin check the item attributes?
     attributes: true
-    #Should the Plugin check the item itemflags?
+    # Should the Plugin check the item itemflags?
     itemflags: true
-    #Should the Plugin check the item custommodeldata?
+    # Should the Plugin check the item custommodeldata?
     custommodeldata: true
-    #Should the Plugin check the item bookmetas?
+    # Should the Plugin check the item bookmetas?
     books: true
-    #Should the Plugin check the banner meta?
+    # Should the Plugin check the banner meta?
     banner: true
-    #Should the Plugin check the skull meta?
+    # Should the Plugin check the skull meta?
     skull: true
-    #Should the Plugin check the firework meta?
+    # Should the Plugin check the firework meta?
     firework: true
-    #Should the Plugin check the map meta?
+    # Should the Plugin check the map meta?
     map: true
-    #Should the Plugin check the leather armor meta?
+    # Should the Plugin check the leather armor meta?
     leatherArmor: true
-    #Should the Plugin check the fishBucket meta?
+    # Should the Plugin check the fishBucket meta?
     fishBucket: true
-    #Should the Plugin check the suspiciousStew meta?
+    # Should the Plugin check the suspiciousStew meta?
     suspiciousStew: true
-    #Should the Plugin check the shulkerBox contents?
+    # Should the Plugin check the shulkerBox contents?
     shulkerBox: true
-    #Should the Plugin check the bundle contents?
+    # Should the Plugin check the bundle contents?
     bundle: true
 ```
