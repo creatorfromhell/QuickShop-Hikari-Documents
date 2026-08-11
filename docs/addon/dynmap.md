@@ -21,6 +21,6 @@ display-by-default: true
 
 ## Localization
 
-Dynmap Addon use the `game-language` settings in your QuickShop-Hikari configuration.
+The Dynmap addon uses the `game-language` setting in your QuickShop-Hikari configuration.
 
 You can customize the string via QuickShop-Hikari's [Localization System](../modules/localization.md).

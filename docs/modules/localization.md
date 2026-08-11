@@ -1,6 +1,6 @@
 # Localization
 
-QuickShop-Hikari use client-language to display for players. All translations offered by volunteers on Crowdin.
+QuickShop-Hikari uses each player's client language. All translations are provided by volunteers on Crowdin.
 
 ## Crowdin Project
 
@@ -10,21 +10,21 @@ To help translate QuickShop-Hikari, please visit our [Crowdin Homepage](https://
 
 ## Crowdin OTA
 
-QuickShop-Hikari will auto update translations from Crowdin via Crowdin OTA, all directly local changes will override when you reload QuickShop-Hikari or restart your server.
+QuickShop-Hikari automatically updates translations through Crowdin OTA. Any direct changes to the local translation files will be overwritten when you reload QuickShop-Hikari or restart the server.
 
-Your installation will keep translations up-to-date without any touch.
+This keeps your translations up to date without manual intervention.
 
 ## Customize Translations
 
-Because all local changes will lost on restart or reload, it's impossible to edit original file directly, you must use our Translation Override system to instead.
+Because direct local changes are lost after a restart or reload, do not edit the original file. Use the Translation Override system instead.
 
-### Get the original file from Github
+### Get the original file from GitHub
 
-Before using the override system, You must get the original translation file from the Github (because the local override file is an empty file by default).
+Before using the override system, download the original translation file from GitHub (the local override file is empty by default).
 
 [Click Here](https://github.com/QuickShop-Community/QuickShop-Hikari/tree/hikari/crowdin/lang)
 
-Search your locale and click in, then download the translation.
+Find your locale, open it, and download the translation file.
 
 ### Override the OTA translation
 
@@ -32,42 +32,46 @@ Go to your locale OTA override folder:
 
 `MINECRAFT_SERVER_ROOT/plugins/QuickShop-Hikari/override/LOCALE_CODE/messages.yml`
 
-You should find a blank YAML format file, open it.
+You should find a blank YAML file. Open it.
 
-Copy the key and values from the original translation to override the file, then you can edit it what you want.
+Copy the keys and values that you want to change from the original translation into the override file, then edit them as needed.
 
 You can copy the entire content directly, or keep the structure and copy and modify parts of it. Translation keys that are not overridden will be overridden with the value provided by Crowdin OTA.
 
-Translation support [MiniMessage](https://docs.adventure.kyori.net/minimessage/) syntax.
+Translations support [MiniMessage](https://docs.adventure.kyori.net/minimessage/) syntax.
 
 You also may need [MiniMessage web viewer](https://webui.advntr.dev/)
 
 ### Make it work
 
-Save and execute command `/quickshop reload` to make it works.
+Save the file, then run `/quickshop reload` to apply the changes.
 
 ### Updating
 
-The override file won't automatically update, you must do it by yourself once our translation have new update.
+The override file is not updated automatically. You must update it manually when the upstream translation changes.
 
-### DEBUG: How I can know which locale code that Minecraft using?
+### DEBUG: How can I find the locale code used by Minecraft?
 
-Type `/quickshop debug` in-game to turn on the debug mode, re-join the server or change the client language, the server console should print the locale code that you using.
+Run `/quickshop debug` in game to enable debug mode. Rejoin the server or change your client language; the server console should then print the locale code in use.
 
 ## Force to use single language
 
 If your server is not facing players across the world, or if you want to disable specific languages on your server, you can set it in config.yml.
 
 ```yaml
-#Choose which languages should be enabled
-#Any client connect to server that using disabled language, will fallback to game-language option there
-#Set to - '*' to enable all available languages
-#The language files will automatically update thorough Crowdin OTA system, you can translate it there:
-#https://crowdin.com/project/qs-hikari
-#If you want custom the language file, use language override system:
-#https://quickshop-community.github.io/QuickShop-Hikari-Documents/docs/modules/localization
+# Enable specific languages for players.
+# If a player uses a disabled language, the plugin will fall back to "game-language".
+#
+# Use:
+#   - '*' to enable all available languages.
+#
+# Language files can update automatically via Crowdin OTA:
+#   https://crowdin.com/project/qs-hikari
+#
+# For custom translations, use the language override system:
+#   https://quickshop-community.github.io/QuickShop-Hikari-Documents/docs/modules/localization
 enabled-languages:
-  - '*'
+- '*'
 ```
 
 For example, to allow `zh-CN` language only on the server, you can set it to:
@@ -92,11 +96,12 @@ In some cases QuickShop-Hikari needs to use the global default language, you can
 
 Although in the vast majority of cases QuickShop-Hikari will not use this option, you can still configure it (if you want) and we recommend keeping the default value.
 
-The comments in config.yml may outdated.
+The comments in `config.yml` may be outdated.
 
 ```yaml
-#Set it to default will use your system language.
-#You can find the valid language code in your client language settings, like en_us
+# Default language used by the plugin.
+# Set to "default" to use the player's Minecraft client language automatically.
+# Example language code: en_us
 game-language: default
 ```
 
@@ -110,26 +115,30 @@ To disable the CrowdinOTA, please add it in the startup flag:
 -Dcom.ghostchu.quickshop.localization.text.SimpleTextManager.enableCrowdinOTA=false
 ```
 
-#### 🆕 Starting in 6.3.0.0 SNAPSHOT 2
-Beginning with 6.3.0.0 SNAPSHOT 2 the JVM Startup Flag has been replaced with an entry in config.yml
+### 🆕 Starting in 6.3.0.0 SNAPSHOT 2
+
+Beginning with 6.3.0.0 SNAPSHOT 2, the JVM startup flag has been replaced by an entry in `config.yml`.
 
 Use
+
 ```yaml
 use-crowdin-ota: false
 ```
 
 ### Self-Hosted OTA Server
 
-If you self-hosted our translation server by using [CrowdinCopyDeploy](https://github.com/Ghost-chu/CrowdinCopyDeploy) tool, you're able to change the OTA server to yourself server.
+If you self-host the translation server using [CrowdinCopyDeploy](https://github.com/Ghost-chu/CrowdinCopyDeploy), you can point the OTA client to your own server.
 
 ```shell
 -Dcom.ghostchu.quickshop.localization.text.SimpleTextManager=<YOUR_SERVER_ADDRESS>
 ```
 
-#### 🆕 Starting in 6.3.0.0 SNAPSHOT 2
-Beginning with 6.3.0.0 SNAPSHOT 2 the JVM Startup Flag has been replaced with an entry in config.yml
+### 🆕 Starting in 6.3.0.0 SNAPSHOT 2
+
+Beginning with 6.3.0.0 SNAPSHOT 2, the JVM startup flag has been replaced by an entry in `config.yml`.
 
 Use
+
 ```yaml
 crowdin-host: <YOUR_SERVER_ADDRESS>
 ```

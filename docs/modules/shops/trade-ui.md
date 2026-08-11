@@ -55,7 +55,7 @@ You can customize:
 
 Supports `lang:` prefix using: `messages.yml`
 
-Reference: 
+Reference:
 
 ---
 

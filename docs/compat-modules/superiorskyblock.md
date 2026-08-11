@@ -10,7 +10,7 @@ This module added [SuperiorSkyBlock](https://www.spigotmc.org/resources/87411/) 
 
 ## How does it work?
 
-Island owner will grant full of controls of all shops on their island, and auto delete those shops when shop owner uncooped.
+Island owners receive full control of all shops on their islands. Those shops are automatically deleted when their owners leave the island team.
 
 ## Configuration
 

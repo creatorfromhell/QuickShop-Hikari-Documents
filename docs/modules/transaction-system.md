@@ -1,12 +1,12 @@
 # Transaction System
 
-QuickShop-Hikari have a system to ensure the transactional consistency, Avoid errors in the transaction process that destroy the data consistency of both parties.
+QuickShop-Hikari includes a system that maintains transactional consistency and prevents errors from corrupting either party's data.
 
 TL;DR If the transaction fails, QuickShop will roll back the money of both parties, restore the Inventory to the state before the transaction started, and reverse the transaction.
 
 ## How it works?
 
-Currently, QuickShop-Hikari have two of types that support Transaction System.
+QuickShop-Hikari currently supports the Transaction System for two shop types.
 
 ## For Economy
 

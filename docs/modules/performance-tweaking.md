@@ -1,18 +1,18 @@
 # Performance Tweaking
 
-If you're running a larget network, you can tweak QuickShop-Hikari settings for better performance.
+If you are running a larger network, you can tune QuickShop-Hikari's settings for better performance.
 
 :::info
 
-The default configuration of QuickShop-Hikari has achieved a moderate balance between performance and player friendliness, unless you notice that QuickShop-Hikari has affected the performance of the server, otherwise you do not need to perform optimization.
+QuickShop-Hikari's default configuration balances performance and player experience. You do not need to tune it unless the plugin is affecting server performance.
 
 :::
 
 ## Trim the isolated data
 
-While the QuickShop-Hikari working progress, some data will went to a isolated data which had no reference by any other records.
+As QuickShop-Hikari operates, some records may become isolated and no longer referenced by other data.
 
-Trim the isolated data can improve the plugin startup time and database query time.
+Trimming isolated data can improve plugin startup and database query times.
 
 ```plain
 /quickshop database trim
@@ -37,7 +37,7 @@ QuickShop-Hikari will record logs into database including:
 * Player Purchase
 * Any Transaction by QuickShop-Hikari
 
-You can purge them by execute command:
+You can purge them by running:
 
 ```plain
 /quickshop database purgelogs
@@ -66,7 +66,7 @@ This feature is **DISABLED** by default.
 The offline-player auto-complete can offer better experience for player auto-complete.  
 But it can create massive Mojang API requests if server running under online-mode.  
 It can increase the load of Mojang's API server and may ban your ip for few minutes to too frequent requests.  
-Turn off this feature by set the settings in config.yml like below:
+Disable this feature by changing the following setting in `config.yml`:
 
 ```yaml
 #Should QS use OfflinePlayer list for TabComplete?
@@ -87,7 +87,7 @@ This feature is **DISABLED** by default.
 QuickShop-Hikari will recalculate the shop inventory contents for update stock/space on hopper move event.  
 It may cause the heavy load the hurt the TPS on busy or redstone theme servers.
 
- it can be disabled by change the setting below:
+It can be disabled by changing the setting below:
 
 ```yaml
 shop:
@@ -107,7 +107,7 @@ This feature is **DISABLED** by default.
 The display-auto-despawn will check ALL loaded shops location and calculate the distance with ALL online players who in the same world with target shop.  
 It can cause the heavy load on your server.
 
-Disable this feature by change the setting below:
+Disable this feature by changing the setting below:
 
 ```yaml
 shop:
@@ -132,4 +132,3 @@ If your server is not migrated from QuickShop-Reremake, you should keep this opt
 legacy-updater:
   shop-sign: false
 ```
-

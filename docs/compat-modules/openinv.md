@@ -6,7 +6,7 @@ Can't find where to download the JAR? [Click here](../faq/where-addons-compacts-
 
 :::
 
-This compatibility module allow players use their EnderChest as shop container and share the content inside of their EnderChest.
+This compatibility module allows players to use their Ender Chest as a shop container and share its contents.
 
 ## Usage
 

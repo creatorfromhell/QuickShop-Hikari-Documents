@@ -1,6 +1,7 @@
 # Packet System for Virtual Display Items
 
 ## Overview
+
 The Packet System in this project is designed to manage the creation, handling, and transmission of packets that facilitate the display of virtual items in Minecraft. It abstracts the underlying networking complexities, allowing seamless integration with multiple versions of the game.
 
 This documentation will guide developers through the components, implementation details, and usage of the Packet System.
@@ -8,7 +9,9 @@ This documentation will guide developers through the components, implementation 
 ---
 
 ## Key Components
+
 ### 1. **PacketHandler**
+
 - **Purpose**: Manages packet handling and initialization logic.
 - **Interface**: `PacketHandler<T>`
 - **Key Methods**:
@@ -20,6 +23,7 @@ This documentation will guide developers through the components, implementation 
     - Retrieves a `PacketFactory` for a specific game version.
 
 ### 2. **PacketFactory**
+
 - **Purpose**: Creates and sends specific packet types.
 - **Interface**: `PacketFactory<T>`
 - **Supported Packets**:
@@ -39,6 +43,7 @@ This documentation will guide developers through the components, implementation 
 Developers implementing custom `PacketFactory` should ensure these packets are correctly handled and optimized for performance.
 
 ### 3. **VirtualDisplayItemManager**
+
 - **Purpose**: Oversees the lifecycle of virtual display items and integrates with packet handlers.
 - **Key Features**:
   - Registers and initializes `PacketHandler` instances (e.g., `ProtocolLibHandler` and `PacketEventsHandler`).
@@ -46,6 +51,7 @@ Developers implementing custom `PacketFactory` should ensure these packets are c
   - Provides thread-safe operations for adding and removing display items.
 
 ### 4. **VirtualDisplayItem**
+
 - **Purpose**: Represents a virtual item displayed to players.
 - **Key Features**:
   - Generates and caches packets for spawning, metadata, velocity, and destruction.
@@ -53,6 +59,7 @@ Developers implementing custom `PacketFactory` should ensure these packets are c
   - Handles spawn and removal operations dynamically.
 
 ### 5. **ProtocolLibHandler and PacketEventsHandler**
+
 - **Purpose**: Provide implementations of `PacketHandler` using ProtocolLib and PacketEvents, respectively.
 - **Differences**:
   - `ProtocolLibHandler` leverages ProtocolLib API.
@@ -61,9 +68,11 @@ Developers implementing custom `PacketFactory` should ensure these packets are c
 ---
 
 ## Expanding the Protocol System
+
 Developers looking to extend or customize the protocol system can follow these steps:
 
 ### Implementing a New PacketHandler
+
 ```java
 /**
  * Custom implementation of a PacketHandler.
@@ -98,6 +107,7 @@ public class CustomPacketHandler implements PacketHandler<T> {
 ```
 
 ### Implementing a New PacketFactory
+
 ```java
 /**
  * Custom implementation of a PacketFactory.
@@ -126,7 +136,9 @@ public class CustomPacketFactory implements PacketFactory<CustomPacket> {
 ---
 
 ## Supported Game Versions
+
 Packet factories are provided for specific game versions through two primary implementations:
+
 - **ProtocolLib**:
   - Versions: 1.20.1 - 1.21.4
   - Factories: `PacketFactoryv1_20`, `PacketFactoryv1_21`
@@ -137,6 +149,7 @@ Packet factories are provided for specific game versions through two primary imp
 ---
 
 ## Best Practices
+
 1. Always unregister chunk listeners (`unregisterSendChunk`, `unregisterUnloadChunk`) during cleanup.
 2. Use thread-safe methods in `VirtualDisplayItemManager` for modifying mappings.
 3. Ensure that packet libraries (ProtocolLib, PacketEvents) are updated to the latest version.
@@ -144,11 +157,12 @@ Packet factories are provided for specific game versions through two primary imp
 ---
 
 ## Resources
+
 - **[ProtocolLib Documentation](https://github.com/dmulloy2/ProtocolLib)**
 - **[PacketEvents Documentation](https://github.com/retrooper/packetevents)**
 
 ---
 
 ## Contact
-For further assistance, please reach out to the development team or refer to the source code for detailed implementations.
 
+For further assistance, please reach out to the development team or refer to the source code for detailed implementations.

@@ -1,4 +1,4 @@
-# GreifPrevention
+# GriefPrevention
 
 :::info
 
@@ -6,13 +6,13 @@ Can't find where to download the JAR? [Click here](../faq/where-addons-compacts-
 
 :::
 
-GreifPrevention compatibility module added compatibility with GF.
+The GriefPrevention compatibility module adds support for GriefPrevention.
 
 ## How does it work
 
-This module allow QuickShop-Hikari check if player have permission to create or use QuickShop in specific region.
+This module allows QuickShop-Hikari to check whether a player has permission to create or use a QuickShop in a specific claim.
 
-And delete shops when claim removed, untrusted, unclaimed, expired, resized or subclaim created.
+It also deletes affected shops when a claim is removed, untrusted, unclaimed, expired, or resized, or when a subclaim is created.
 
 ## Configuration
 
@@ -50,7 +50,7 @@ delete-on-claim-expired: true
 #Removes a shop if the shop was outside the subclaim but now it is inside the subclaim.
 #Never removes a shop of the claim owner when resizing a subclaim.
 delete-on-claim-resized: true
-#Should Quickshop delete shops if a subclaim has been created?
+#Should QuickShop delete shops if a subclaim has been created?
 #If a subclaim is created that will contain, initially, shops from others players, then we will remove them.
 #Because they won't have, initially, permission to create a shop in that subclaim.
 #Never removes a shop of the claim owner.

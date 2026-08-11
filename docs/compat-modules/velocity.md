@@ -6,7 +6,7 @@ Can't find where to download the JAR? [Click here](../faq/where-addons-compacts-
 
 :::
 
-This is a Velocity plugin, you need install it on your Velocity's plugins folder.
+This is a Velocity plugin. Install it in Velocity's `plugins` folder.
 
 ## How does it work?
 
@@ -16,4 +16,4 @@ All forwarding is indicated by QuickShop-Hikari on the Spigot server and ends wh
 
 ## Extra settings for Spigot side
 
-You might need add startup flag `-Dcom.ghostchu.quickshop.util.Util.forceBungeeCord=true` to force QuickShop-Hikari register message channel, because Hikari couldn't detect Velocity by it self. 
+You may need to add the startup flag `-Dcom.ghostchu.quickshop.util.Util.forceBungeeCord=true` to force QuickShop-Hikari to register the messaging channel if it cannot detect Velocity automatically.

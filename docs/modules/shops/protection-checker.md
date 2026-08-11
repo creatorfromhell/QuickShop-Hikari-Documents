@@ -1,28 +1,28 @@
 # Protection Checker
 
-QuickShop use a util called `Protection Checker` to prevent players create shops at their had no build access positions (e.g Spawn).
+QuickShop uses a utility called `Protection Checker` to prevent players from creating shops where they do not have build access (for example, at spawn).
 
 ## How does it work?
 
-When player trying to create a shop at a location, QuickShop will create a new *fake* `BlockBreakEvent` to simulate player break blocks.  
+When a player tries to create a shop, QuickShop creates a *fake* `BlockBreakEvent` to simulate the player breaking a block.  
 If it is canceled by any plugin, QuickShop will refuse the shop creation.  
 
 ## Side Effects
 
-Some plugins that imcompatitable with QuickShop will trigger the gadget in Player's hand or keeping block the shop creation.  
+Some plugins that are incompatible with QuickShop may trigger the item in the player's hand or repeatedly block shop creation.  
 
-## Resolve the plugin conflicting
+## Resolve plugin conflicts
 
-When a possible conflict detected by QuickShop and this operation triggered by Server administrator, the administrator will receive a message like the image below:
+When QuickShop detects a possible conflict during an operation performed by a server administrator, the administrator receives a message like the one below:
 
 ![detected](img/permission-checker-conflict-demo.png)
 
-You can retrieve those information from the tips:
+You can retrieve the following information from the message:
 
 * PluginName (`BreakTest`)
 * Plugin Listener Class Name (`com.ghsotchu.test.breaktest.TestListener`)
 
-To resolve the conflicting, you need configure the ignore list:
+To resolve the conflict, configure the ignore list:
 
 ```yaml
 shop:

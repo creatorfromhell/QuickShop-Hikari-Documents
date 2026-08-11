@@ -6,7 +6,7 @@ Can't find where to download the JAR? [Click here](../faq/where-addons-compacts-
 
 :::
 
-Plan addon allow server owners to showcase the recent QuickShop-Hikari activities on the server.
+The Plan addon allows server owners to display recent QuickShop-Hikari activity on the server.
 
 ## Data Tracked
 
