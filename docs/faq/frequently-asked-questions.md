@@ -44,6 +44,10 @@
 
 > Maybe. Please open an issue on our GitHub for this.
 
+## I installed Vault, so why is QuickShop still not working?
+
+> Vault is not an economy plugin; it is only an economy API. Please install an economy plugin that supports Vault.
+
 ## Why does it not load on Minecraft 1.7–1.19?
 
 > See "Tested Minecraft Versions." The latest version supports only Minecraft 1.20 and later.
@@ -51,10 +55,6 @@
 ## Are there any known incompatibilities?
 
 > Some plugins may not work correctly alongside QuickShop, and unfortunately there is often little we can do on our side to resolve these conflicts.
-
-### ShutterBug
-
-> ShutterBug is known to conflict with QuickShop-Hikari's functionality.
 
 ### BungeeCord Chat Plugins
 
