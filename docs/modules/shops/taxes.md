@@ -64,6 +64,47 @@ This gives you flexibility depending on your economy design.
 
 All tax-related settings are located under the `shop-tax` section in `config.yml`.
 
+The current configuration supports both flat-rate and progressive tax systems:
+
+```yaml
+shop-tax:
+  # Select which tax system to use:
+  # basic       = Flat tax rate
+  # progressive = Tax rate based on player balance brackets
+  type: basic
+
+  # Account name that receives collected tax money.
+  # Set to "" to disable depositing (tax may still be deducted).
+  account: tax
+
+  # Show tax details in transaction messages.
+  show: false
+
+  # Disable taxes for unlimited shops.
+  disable-for-unlimited-shop: false
+
+  # Who to apply the tax to, be it the shop or the player interacting with the shop.
+  # player = Apply tax to the player who is interacting with the shop.
+  # shop = Apply tax to the shop owner.
+  # payee = Apply tax to the person receiving the money.
+  # both = Apply tax to both the player and the shop owner.
+  apply-to: player
+
+  basic:
+    # Flat tax rate (decimal format).
+    # Example: 0.05 = 5%
+    rate: 0.05
+
+  progressive:
+    brackets:
+      '10000': 0.01
+      '50000': 0.02
+      '250000': 0.03
+      '1000000': 0.05
+      '5000000': 0.08
+      '-1': 0.12
+```
+
 After updating to 6.2.0.11+, review your tax configuration carefully, as the old tax system has been replaced.
 
 ---

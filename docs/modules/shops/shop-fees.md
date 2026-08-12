@@ -1,6 +1,6 @@
 # Shop Fees
 
-QuickShop allow server administrator setup the shops fees for creating, changing prices.
+QuickShop allows server administrators to configure fees for creating shops and changing prices.
 
 ## Configuration
 
@@ -11,7 +11,7 @@ shop:
   #Should QS refund the player when their shops are deleted/removed/broken?
   refund: false
   # Should QS refund from the tax-account?
-  # refund is as much as possible, player may won't get all refund if the tax-account had no enough money.
+  # Refund as much as possible; players may not receive a full refund if the tax account has insufficient funds.
   refund-from-tax-account: false
   #Should there be a fee for changing shop prices?
   #This can help with endless price undercutting.
@@ -37,29 +37,29 @@ shop:
 ## Creation fee
 
 It is controlled by `shop.cost`, set it to `0` for free.  
-You can refund the creation cost by turn on `shop.refund` option, and if you want refund player from quickshop tax account, you can also turn on option `shop.refund-from-tax-account`, but player may won't receive the refund if tax account run out of money.
+Enable `shop.refund` to refund the creation fee. To pay refunds from the QuickShop tax account, also enable `shop.refund-from-tax-account`. A player may not receive a refund if the tax account does not have enough money.
 
 ## Price changing fee
 
-To prevent player change their shops price too frequently, you can turn on price changing fee by turn on option `shop.price-change-requires-fee`.  
-After the option is enabled, player need to pay the tax account money that specified by `shop.fee-for-price-change` option everytime their changes.
+To prevent players from changing shop prices too frequently, enable `shop.price-change-requires-fee`.  
+After this option is enabled, players must pay the amount specified by `shop.fee-for-price-change` each time they change a price.
 
 ## Naming fee
 
-You can set that require player pay for naming their shop by set option `shop.name-fee` to an non-zero number.  
-Everytime player want to change their shop's name, player must pay for it.
+To charge players for naming their shops, set `shop.name-fee` to a nonzero value.  
+Players must pay this fee each time they change a shop's name.
 
 ## Ongoing Fee
 
-To prevent players hold massive idle shops on your server, or keep the market balance, you can enable on-going fee.  
+To discourage players from keeping large numbers of idle shops and to maintain market balance, you can enable an ongoing fee.  
 
-When this feature enabled, player need to pay `shop.ongoing-fee.cost-per-shop`$ every `shop.ongoing-fee.ticks` game ticks, for every single shop they're owned.  
+When this feature is enabled, players pay the amount set by `shop.ongoing-fee.cost-per-shop` every `shop.ongoing-fee.ticks` game ticks for each shop they own.  
 
 If player cannot afford the ongoing-fee, the shops will be deleted.
 
 ## Tax
 
-QuickShop provide a system that allow you to tax.
+QuickShop provides a configurable taxation system.
 
 ### Configuration
 

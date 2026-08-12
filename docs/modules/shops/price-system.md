@@ -1,6 +1,6 @@
 # Price Limiter
 
-QuickShop provide a price limiter allow you specific the item's min or max price on your server.
+QuickShop provides a price limiter that lets you set minimum and maximum item prices on your server.
 
 ![price-restricted](img/price-restricted.png)
 
@@ -10,7 +10,7 @@ To edit the limit rules, you need to open `price-restriction.yml` file.
 
 ## Enable the limiter
 
-Limiter is disabled by default, you must turn it on before you edit the rules to make it works.
+The limiter is disabled by default. Enable it before configuring the rules.
 
 ```yaml
 enable: true
@@ -20,10 +20,10 @@ enable: true
 
 ## Define unspecified item price limit
 
-You can limit all items maximum or minimum price that not match any rules.
+You can set minimum and maximum prices for items that do not match any rule.
 
 ```yaml
-undefined: # This option not control by enable option, always enabled
+undefined: # This option is always enabled and is not controlled by the enable option
   min: 0.01 # Can be zero if you want player create a free shop
   max: -1 # Actually this can be up to 1.7976931348623157E308
 ```
@@ -73,9 +73,9 @@ rules: # Rules set
     max: 100.0
 ```
 
-The `example1` and `example2` are rule name, you can write any random name that you can read.
+`example1` and `example2` are rule names. You may replace them with any clear, unique names.
 
-The `items` is a list that contains the items which you want limit to.
+`items` is a list of the items to which the rule applies.
 The item name can be:
 
 * Bukkit Material Name
@@ -83,10 +83,10 @@ The item name can be:
 
 The `currency` only works under Multi Currency mode.
 
-The `min` means the item minimal price.
-The `max` means the item maximum price.
+`min` is the item's minimum price.
+`max` is the item's maximum price.
 
-All items in one rule set to share the same price limit, to give different price limit, you must create another rule.
+All items in a rule share the same price limits. Create another rule to assign different limits.
 
 ---
 
@@ -107,7 +107,7 @@ This allows you to block entire categories of items using simple patterns instea
 
 Pattern matching is case-insensitive.
 
-```
+```text
 *_axe
 *_AXE
 ```
@@ -175,7 +175,7 @@ items:
 
 Players who have:
 
-```
+```text
 quickshop.price.restriction.bypass.<rule-name>
 ```
 

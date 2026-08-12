@@ -60,7 +60,7 @@ If a name or lore begins with: `lang:`
 
 The text is pulled from: `messages.yml`
 
-Reference: 
+Reference:
 
 This allows full localization.
 

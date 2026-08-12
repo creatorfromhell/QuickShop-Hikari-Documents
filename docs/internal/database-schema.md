@@ -18,7 +18,6 @@ Basically, Copy-on-write.
 
 A data record only be deleted from the database when no any table references their `data_id`.
 
-
 | Column Name     | DataType                 | Default             | Description                                                                                        |
 |-----------------|--------------------------|---------------------|----------------------------------------------------------------------------------------------------|
 | id              | INT UNSIGNED Primary Key | Auto Increment      | Record ID (aka. `data_id`)                                                                         |
@@ -46,7 +45,6 @@ Multiple `shop_id` can correspond to the same `data_id`.
 |-------------|--------------------------|----------------|---------------------------------|
 | id          | INT UNSIGNED Primary Key | Auto Increment | Record ID (aka. `shop_id`)      |
 | data_id     | INT UNSIGNED NOT NULL    | N/A            | Data Record ID (aka. `data_id`) |
-
 
 ### `shop_map`
 

@@ -229,11 +229,11 @@ If you register a behavior using the same key as an existing one, your behavior 
 
 # Best Practices
 
-### Always Use Unique Keys
+## Always Use Unique Keys
 
 Avoid naming collisions:
 
-```
+```text
 MYPLUGIN_CUSTOM_BEHAVIOR
 ```
 

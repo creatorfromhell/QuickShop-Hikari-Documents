@@ -1,6 +1,6 @@
 # Licenses
 
-Quickshop-Hikari is dual licensed under [GNU General Public License v3.0][gplv3] and [GNU Affero General Public License v3.0](https://www.gnu.org/licenses/agpl-3.0.html).  
+QuickShop-Hikari is dual-licensed under the [GNU General Public License v3.0][gplv3] and [GNU Affero General Public License v3.0](https://www.gnu.org/licenses/agpl-3.0.html).  
 New contributions will follow the updated license of [GNU Affero General Public License v3.0](https://www.gnu.org/licenses/agpl-3.0.html).
 
 ## Third-party components
@@ -40,7 +40,7 @@ In accordance with the relevant requirements of their license, we list them belo
 
 [The MIT License][mit]
 
-### Jetbrain's Annotations for JVM-based languages
+### JetBrains Annotations for JVM-based languages
 
 [Apache Licenses v2.0][apache]
 
@@ -120,18 +120,18 @@ For extra components (e.g Addons or Compatibility Modules), they are published i
 
 ### Paste Viewer
 
-Paster Viewer style powered by [Sakura.css](https://github.com/oxalorg/sakura).  
+Paste Viewer styling powered by [Sakura.css](https://github.com/oxalorg/sakura).  
 Pastebin service powered by [Lucko's Bytebin](https://bytebin.lucko.me/), [support Lucko](https://github.com/sponsors/lucko).  
 
 ### Reversed Proxy
 
 #### Bytebin Proxy
 
-Service provided by CloudFlare Worker.
+Service provided by a Cloudflare Worker.
 
 #### Ko-fi API Proxy
 
-Service provided by CloudFlare Worker.
+Service provided by a Cloudflare Worker.
 
 ### Donation Service
 

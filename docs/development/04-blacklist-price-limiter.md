@@ -9,7 +9,7 @@ Thanks to ItemExpression, you definitely do not want to parse expressions yourse
   boolean shoppable = Util.isShoppables(material);
 ```
 
-## Check if a item has been blacklisted
+## Check whether an item has been blacklisted
 
 ```java
 ItemStack stack = ...;
@@ -39,4 +39,3 @@ PriceLimiterStatus status = result.getStatus();
 //NOT_A_WHOLE_NUMBER
 //NOT_VALID
 ```
-

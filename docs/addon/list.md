@@ -8,7 +8,6 @@ Can't find where to download the JAR? [Click here](../faq/where-addons-compacts-
 
 This addon added a command `/quickshop list` to allow the player or server administrator to listing all shops.
 
-
 ## Permissions
 
 * `quickshopaddon.list.self` - The permission to use `/quickshop list` to query self shops
@@ -28,9 +27,6 @@ By hover your cursor on a entry, you will able to see the shop name, shop locati
 
 ## Fast Preview
 
-If player are able to preview a shop (e.g click [Preview Shop] in purchase dialog), then player also able to preview the shop remotely by clicking the entry.
+If a player can preview a shop (for example, by clicking **Preview Shop** in the purchase dialog), they can also preview it remotely by clicking its entry.
 
 ![click](img/list_click_entry_preview.png)
-
-
-

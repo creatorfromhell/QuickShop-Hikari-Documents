@@ -43,6 +43,7 @@ Triggered when a shop is being created.
 - Can modify initial shop properties
 
 Common uses:
+
 - Restrict creation conditions
 - Modify default values
 - Enforce region rules
@@ -57,6 +58,7 @@ Triggered when a shop is deleted.
 - Can be used for logging or cleanup
 
 Common uses:
+
 - External database sync
 - Custom logging
 - Reward refunds
@@ -68,6 +70,7 @@ Common uses:
 Triggered when a shop is saved, updated, or persisted.
 
 Common uses:
+
 - Sync external storage
 - Monitor database updates
 - Analytics
@@ -86,6 +89,7 @@ Triggered when a shop price changes.
 - Provides old and new price values
 
 Common uses:
+
 - Enforce price caps
 - Apply dynamic pricing rules
 - Integrate economy balancing plugins
@@ -97,6 +101,7 @@ Common uses:
 Triggered when a shop name is changed.
 
 Common uses:
+
 - Filter inappropriate names
 - Apply formatting rules
 
@@ -107,6 +112,7 @@ Common uses:
 Triggered when shop ownership changes.
 
 Common uses:
+
 - Restrict transfers
 - Sync permissions
 - Audit logs
@@ -118,6 +124,7 @@ Common uses:
 Triggered when unlimited mode is toggled.
 
 Common uses:
+
 - Restrict unlimited to admins
 - Enforce custom stock rules
 
@@ -139,6 +146,7 @@ Supports:
 - Custom shop types (via IShopType)
 
 Common uses:
+
 - Restrict specific shop types
 - React to freeze/unfreeze
 - Update external maps or UIs
@@ -157,6 +165,7 @@ Fired before a transaction is processed.
 - Allows validation
 
 Common uses:
+
 - Block trades conditionally
 - Apply custom checks
 
@@ -175,6 +184,7 @@ Provides:
 - Quantity
 
 Common uses:
+
 - Logging
 - Statistics
 - External economy sync
@@ -195,6 +205,7 @@ Provides:
 - Transaction builder reference
 
 Common uses:
+
 - VIP tax discounts
 - Dynamic taxation
 - Region-based tax multipliers
@@ -214,6 +225,7 @@ Allows:
 - Applying rank-based scaling
 
 Common uses:
+
 - Rank-based bonuses
 - Permission-based shop limits
 - Event-based shop cap increases
@@ -233,6 +245,7 @@ Fired before interaction behavior executes.
 - Provides InteractionBehavior
 
 Common uses:
+
 - Restrict specific click types
 - Override interaction logic
 
@@ -243,6 +256,7 @@ Common uses:
 Triggered after interaction execution.
 
 Common uses:
+
 - Metrics
 - Logging
 - Custom UI updates
@@ -256,6 +270,7 @@ Common uses:
 Triggered when a display item updates.
 
 Common uses:
+
 - Replace display logic
 - Sync external map markers
 - Customize display rendering
@@ -269,6 +284,7 @@ Common uses:
 Triggered when resolving sign layout.
 
 Common uses:
+
 - Inject custom placeholders
 - Modify sign lines
 - Apply per-player formatting

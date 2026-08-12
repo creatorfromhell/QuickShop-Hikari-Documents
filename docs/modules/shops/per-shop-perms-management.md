@@ -1,6 +1,6 @@
 # Per shop permission management
 
-QuickShop-Hikari provide a system to allow control every single shop's permissions.
+QuickShop-Hikari provides a system for controlling each shop's permissions individually.
 
 **THIS IS NOT PLUGIN PERMISSION NODES, IT IS SHOP LEVEL!**  
 To check the plugin's permission nodes, please click [here](../../setup/permissions.md).

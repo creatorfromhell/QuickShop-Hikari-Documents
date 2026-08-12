@@ -12,7 +12,7 @@ This restriction cannot be lifted.
 
 For more information on how this mechanism works, please refer to: [EnvironmentChecker](https://github.com/QuickShop-Community/QuickShop-Hikari/blob/hikari/quickshop-bukkit/src/main/java/com/ghostchu/quickshop/util/envcheck/EnvironmentChecker.java).
 
-This feature will request the CloudFlare network, we have changed our privacy policy, see: [Privacy Policy -> IP Detecting](privacy.md)
+This feature sends a request through the Cloudflare network. For details, see [Privacy Policy → IP Detection](privacy.md).
 
 ## Disclaimers
 

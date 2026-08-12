@@ -6,10 +6,10 @@ Can't find where to download the JAR? [Click here](../faq/where-addons-compacts-
 
 :::
 
-This is a BungeeCord plugin, you need install it within your BungeeCord's plugins folder. You also need the dependant plugin [Addon-BungeeCord](./bungeecord.md).
+This is a BungeeCord plugin. Install it in BungeeCord's `plugins` folder. You also need the dependency [Addon-BungeeCord](./bungeecord.md).
 
 ## How does it work?
 
-The BungeeCord-Geyser bridge plugin gives you ability to let  QuickShop-Hikari (and it's addon) on the installed backend Spigot server to know if a player is a Geyser or Floodgate player.
+The BungeeCord-Geyser bridge lets QuickShop-Hikari and its addons on a backend Spigot server identify Geyser and Floodgate players.
 
 This plugin itself does not provide any functionality, it only functions as an API.

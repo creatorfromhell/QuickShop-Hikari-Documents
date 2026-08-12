@@ -13,7 +13,7 @@ This module added [Residence](https://www.spigotmc.org/resources/residence-1-7-1
 This module registers two of flags `quickshop-create` and `quickshop-trade` into your Residence flags registry.  
 You can use them to control the players permission in your residence.
 
-Also, this module allow residence's owner grant full controls of all shops inside their residence.
+This module also lets residence owners take full control of all shops inside their residences.
 
 ## Configuration
 

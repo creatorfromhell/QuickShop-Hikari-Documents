@@ -5,27 +5,28 @@ This page will walk you through the process of installing QuickShop-Hikari on yo
 ## Requirements
 
 * A [Paper][paper]-based Minecraft server (1.20 or higher, Java 21)
-* [Vault][vault] for bridging the economy system between QuickShop and your economy plugins.
-* For virtual item displays, and per-player localization you need a supported protocol library:
+* [Vault][vault] to bridge QuickShop and your economy plugin.
+* For virtual item displays and per-player localization, you need a supported protocol library:
   * [ProtocolLib][plib]
   * [PacketEvents](https://www.spigotmc.org/resources/packetevents-api.80279/)
-* Any Vault compatible economy plugin, such as [XConomy][xconomy], If you have [EssentialsX][essx], it will also works well.
+* Any Vault-compatible economy plugin, such as [XConomy][xconomy]. [EssentialsX][essx] is also supported.
 * A permission management plugin like [LuckPerms][luckperm].
 
-In this document, we assume that you are using the latest version of QuickShop-Hikari, ProtocolLib, XConomy, Vault and LuckPerms under Windows 11 operation system (Linux is basically the same).
+This guide assumes that you are using the latest versions of QuickShop-Hikari, ProtocolLib, XConomy, Vault, and LuckPerms on Windows 11. The process is largely the same on Linux.
 
 ## Installing dependencies
 
 Before installing QuickShop-Hikari, you should make sure that you have all dependencies installed, including [Vault][vault], [ProtocolLib][plib] or [PacketEvents](https://www.spigotmc.org/resources/packetevents-api.80279/), [XConomy][xconomy] (or [EssentialsX][essx] if you want) and [LuckPerms][luckperm]!
 
-Download the plugins and drop them into `plugins` folder and you're all set!
+Download the plugins and place them in the `plugins` folder.
 
 ## Configuring the Display Protocol
-If you have both ProtocolLib and PacketEvents, and you want to utilize PacketEvents for your display items, you'll need to set it as such in config.yml: `shop. display-protocol: 'packetevents'`
+
+If both ProtocolLib and PacketEvents are installed and you want to use PacketEvents for display items, set `shop.display-protocol: 'packetevents'` in `config.yml`.
 
 ## Installing QuickShop-Hikari
 
-Download the latest version of QuickShop-Hikari from [Modrinth][qs-modrinth], if you find multiple files that have `Compat-` prefix in file name, ignore them in this step.  
+Download the latest version of QuickShop-Hikari from [Modrinth][qs-modrinth]. If several files have the `Compat-` prefix, ignore them during this step.  
 The only file you need to download should have a **Primary** tag like this in the image below:
 
 ![download primary file](./img/download-primary.png)

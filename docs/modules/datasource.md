@@ -1,54 +1,75 @@
 # Databases
 
-QuickShop-Hikari support `H2` and `MySQL` two types of databases.
+QuickShop-Hikari supports two database types: `H2` and `MySQL`.
 
 ## Configuration
 
 ```yaml
-#MySQL database settings.
+# Database Configuration
+# QuickShop supports:
+# - H2 (local file database; simplest setup)
+# - MySQL (recommended for large servers or networks)
 database:
-  #false = use local SQLite database.
-  #true = use local/remote MySQL database.
+  # false = Use local H2 database
+  # true  = Use MySQL database
   mysql: false
-  # The database address. (Only required if mysql is true)
+  # Database host (only required when mysql is true)
   host: localhost
-  # The database port. (Only required if mysql is true)
+  # Database port (only required when mysql is true)
   port: 3306
-  # The database names. (Only required if mysql is true)
+  # Database name (only required when mysql is true)
   database: quickshop
-  # The database username. (Only required if mysql is true)
+  # Database username (only required when mysql is true)
   user: root
-  # The database password. (Only required if mysql is true)
+  # Database password (only required when mysql is true)
   password: passwd
-  # Set prefix to "none" to remove prefix (Both local and remote will be used).
-  prefix: "qs_"
-  # Should QuickShop use SSL for database connections?  (Only required if mysql is true)
+  # Table prefix. Set to "none" to remove prefix.
+  # Each server must use a unique table prefix. Multiple servers cannot share the same table prefix.
+  prefix: qs_
+  # Use SSL for database connections (only required when mysql is true)
   usessl: false
-  # Properties for creating connections, you can add your own properties for datasource here. (Both local and remote will be used).
+  # Disable username caching in the database.
+  disable-username-cache: false
+  # Enable UUID caching/baking for faster lookups (advanced).
+  bake-uuids: false
+  # Loader service thread count:
+  # -1 = Automatically choose a recommended value.
+  # Advanced option—change only if you understand thread tuning.
+  loader-threads: -1
+  # Include full database info in /qs paste output.
+  generate-full-report: false
+  # Disable shutdown timeout while saving.
+  # May cause the server to hang during shutdown.
+  unlimited-save-wait: false
+  # Skip database/table version checks.
+  # Disabling is risky; support may not be provided.
+  skip-version-check: false
+  # Connection pool properties (HikariCP).
+  # Advanced: tune for large servers if you know what you're doing.
   properties:
-    connection-timeout: 60000
-    validation-timeout: 3000
-    idle-timeout: 60000
-    login-timeout: 10
-    maxLifeTime: 60000
-    maximum-pool-size: 8
-    minimum-idle: 2
+    connectionTimeout: 60000
+    idleTimeout: 10000
+    maxLifetime: 1800000
+    maximumPoolSize: 10
+    minimumIdle: 10
     cachePrepStmts: true
     prepStmtCacheSize: 250
     prepStmtCacheSqlLimit: 2048
     useUnicode: true
     characterEncoding: utf8
+    allowPublicKeyRetrieval: true
+    keepaliveTime: 60000
 ```
 
 ## Migrate
 
-If you want to migrate your quickshop data from one type of database to another type, you can export your data then import them.
+To migrate your QuickShop data from one database type to another, export the data and then import it into the new database.
 
-Execute the `/quickshop export` command in console, quickshop will export a zip which include shop datas.
+Run `/quickshop export` in the console. QuickShop will create a ZIP archive containing the shop data.
 
 ![exported data](img/database-export.png)
 
-Stop your database, switch the datasource, and start the server.  
-You may noticed all shops are gone, because new datasources had no data inside, we will restore them from export.
+Stop the server, switch the data source, and start the server again.  
+The shops will initially appear to be missing because the new data source is empty; restore them from the export.
 
-Rename that exported ZIP file to `recovery.zip`, execute `/quickshop recovery` and restart your server, all shops should back.
+Rename the exported ZIP file to `recovery.zip`, run `/quickshop recovery`, and restart the server. All shops should then be restored.
