@@ -29,6 +29,6 @@ the latest versions of Minecraft.
 
 ## Help us translate or improve the documents
 
-For translation, please check here: <https://crowdin.com/project/qs-hikari-docs>  
+For translation, please check here: [Crowdin project](https://crowdin.com/project/qs-hikari-docs)
 
 To help us improve this page, switch to `American English` and click `Edit this page` at the bottom of the document to open a pull request on GitHub.
