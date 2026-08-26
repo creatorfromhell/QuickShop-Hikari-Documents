@@ -18,14 +18,18 @@ enable: true
 
 ---
 
-## Define unspecified item price limit
+## Define global price limits
 
-You can set minimum and maximum prices for items that do not match any rule.
+You can set separate minimum and maximum prices for selling and buying shops.
 
 ```yaml
-undefined: # This option is always enabled and is not controlled by the enable option
-  min: 0.01 # Can be zero if you want player create a free shop
-  max: -1 # Actually this can be up to 1.7976931348623157E308
+global: # These options are always enabled and are not controlled by the enable option
+  selling:
+    min: 0.01 # Can be zero if you want player create a free shop
+    max: -1 # Actually this can be up to 1.7976931348623157E308
+  buying:
+    min: 0.01
+    max: -1
 ```
 
 ---
@@ -33,6 +37,14 @@ undefined: # This option is always enabled and is not controlled by the enable o
 ## Create a rule
 
 All rules are under the `rules` section in configuration.
+
+You can set the default scope for rules that do not define their own scope.
+
+```yaml
+default-rule-scope: BUYING_AND_SELLING
+```
+
+Available scopes are `BUYING`, `SELLING`, and `BUYING_AND_SELLING`.
 
 ```yaml
 rules: # Rules set
@@ -45,6 +57,7 @@ rules: # Rules set
       - STONE_HOE
     currency:
       - '*'
+    scope: BUYING_AND_SELLING
     min: 1.0
     max: 50.0
 
@@ -57,6 +70,7 @@ rules: # Rules set
       - GOLDEN_HOE
     currency:
       - '*'
+    scope: SELLING
     min: 10.0
     max: 100.0
 
@@ -69,11 +83,14 @@ rules: # Rules set
       - DIAMOND_HOE
     currency:
       - '*'
+    scope: BUYING
     min: 10.0
     max: 100.0
 ```
 
 `example1` and `example2` are rule names. You may replace them with any clear, unique names.
+
+`scope` controls whether the rule applies to buying shops, selling shops, or both. If it is not provided, `default-rule-scope` is used.
 
 `items` is a list of the items to which the rule applies.
 The item name can be:
