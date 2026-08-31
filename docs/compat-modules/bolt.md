@@ -1,5 +1,11 @@
 # Bolt
 
+:::info
+
+Can't find where to download the JAR? [Click here](../faq/where-addons-compacts-at).
+
+:::
+
 QuickShop-Hikari includes an official compatibility module for **Bolt**, the block protection plugin.
 
 The Bolt compatibility module prevents players from creating QuickShop shops on Bolt-protected containers that they are not allowed to access.

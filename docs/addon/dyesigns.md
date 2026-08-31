@@ -1,5 +1,11 @@
 # DyeSigns
 
+:::info
+
+Can't find where to download the JAR? [Click here](../faq/where-addons-compacts-at).
+
+:::
+
 DyeSigns is an official QuickShop-Hikari addon that allows players to customize the appearance of their shop signs using normal Minecraft items.
 
 With DyeSigns installed, players can:
