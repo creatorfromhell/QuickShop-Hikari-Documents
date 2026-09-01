@@ -1,90 +1,218 @@
 # Privacy
 
-When using the QuickShop-Hikari service, we will send the necessary and partial optional data to the relevant service provider.  
+When using QuickShop-Hikari, some features communicate with external service providers. Some of these services are required when you explicitly use a feature, while others can be disabled through QuickShop-Hikari or the service's own configuration.
 
 ## bStats
 
-We use [bStats.org](https://bstats.org/) to collect statistical indicators so that we can better improve our products.  
+QuickShop-Hikari uses [bStats.org](https://bstats.org/) to collect anonymous statistical metrics that help us understand how QuickShop-Hikari is being used and improve the project.
 
-[bStats's Privacy Policy](https://bstats.org/privacy-policy)
+You can review:
 
-All data collected will be displayed on this page: [bStats - QuickShop-Hikari](https://bstats.org/plugin/bukkit/QuickShop-Hikari/14281)
+- [bStats Privacy Policy](https://bstats.org/privacy-policy)
+- [QuickShop-Hikari's public bStats statistics](https://bstats.org/plugin/bukkit/QuickShop-Hikari/14281)
 
-### Disable bStats metrics
+### Disable bStats Metrics
 
-To disable bStats metrics, update QuickShop-Hikari's privacy configuration:
+QuickShop-Hikari provides privacy-category controls for its bStats metrics:
 
 ```yaml
-#The Privacy Controller allows you to enable or disable privacy-related options.
-#To audit privacy-related activity, run `/quickshop paste` and check the `Privacy Logs` section.
-#To opt out of bStats completely, open /plugins/bStats/config.yml.
+# Privacy Controller allows you to turn on/off options related to privacy.
+# To audit privacy-related activity, execute `/quickshop paste`
+# and check the Privacy Logs section.
+# To opt out of bStats completely, use /plugins/bStats/config.yml.
 privacy:
-  # Category Control
   type:
-    # Including bStats metrics with `Statistic - ` prefix, see all metrics we collected on https://bstats.org/plugin/bukkit/QuickShop-Hikari/14281
+    # Includes bStats metrics with the `Statistic - ` prefix.
     STATISTIC: true
-    # Including bStats metrics with `Research - ` prefix, see all metrics we collected on https://bstats.org/plugin/bukkit/QuickShop-Hikari/14281
+
+    # Includes bStats metrics with the `Research - ` prefix.
     RESEARCH: true
 ```
 
-Note: Previously collected data is not deleted from bStats. Contact the bStats administrators to request its removal.  
-Note: QuickShop respects the global bStats setting. If bStats is disabled globally, QuickShop will not send data to bStats.  
+Setting either category to `false` disables QuickShop-Hikari metrics belonging to that category.
+
+To disable bStats completely for the server, use the global bStats configuration at:
+
+```text
+/plugins/bStats/config.yml
+```
+
+QuickShop-Hikari respects the global bStats configuration and will not submit bStats data when bStats has been globally disabled.
+
+:::note
+Disabling metrics prevents future submissions. Data that has already been submitted to bStats is controlled by bStats and is not automatically deleted when metrics are disabled.
+:::
 
 ## Rollbar Error Tracking
 
-We use [Rollbar](https://rollbar.com/) to collect error reports. Errors related to QuickShop-Hikari may be submitted automatically to our Rollbar project.
+QuickShop-Hikari uses [Rollbar](https://rollbar.com/) for automated error reporting.
 
-You can check Rollbar's Privacy Policy [here](https://docs.rollbar.com/docs/privacy-policy).
+When enabled, errors related to QuickShop-Hikari may be submitted to Rollbar to help diagnose crashes and other unexpected behavior.
 
-Including:
+See the [Rollbar Privacy Policy](https://docs.rollbar.com/docs/privacy-policy).
 
-* Time
-* Error and StackTrace
-* OS Name
-* OS Arch
-* OS Version
-* System CPU Cores
-* Java Version
-* Server/Bukkit Build Version
-* Server Players
-* Online Mode
-* Your QuickShop-Hikari unique ID
+Submitted diagnostic information may include:
 
-### Regenerate the QuickShop-Hikari unique ID
+- Time
+- Error and stack trace
+- Operating system name
+- Operating system architecture
+- Operating system version
+- System CPU core count
+- Java version
+- Server/Bukkit build version
+- Server player information
+- Online-mode status
+- QuickShop-Hikari unique ID
 
-When you install QuickShop-Hikari for the first time, a unique ID is generated and written to `config.yml`.  
-The ID is completely random and is not derived from any other information. It is used for bug tracking and other situations in which individual QuickShop-Hikari instances must be distinguished.  
+### QuickShop-Hikari Unique ID
 
-In case you are sure that no addon is using this value, you can remove this from the configuration file so that QuickShop-Hikari will generate a new unique ID.
+A random QuickShop-Hikari instance ID is generated for a fresh installation and stored in `config.yml`.
 
-### Disable Rollbar error tracking
+The ID is randomly generated and is not calculated from other identifying information. It is used for scenarios where QuickShop-Hikari needs to distinguish between different plugin installations, including diagnostics and error tracking.
 
-To disable Rollbar error tracking, update QuickShop-Hikari's configuration:
+If you are certain that no addon or integration depends on the existing value, removing the ID from the configuration allows QuickShop-Hikari to generate a new one.
+
+### Disable Rollbar Error Tracking
+
+Automatic error reporting can be disabled in `config.yml`:
 
 ```yaml
 # Should QS be allowed to automatically report errors to the author?
 # It will also create a paste for data-recovery or debug when the server boots up.
-auto-report-errors: true
+auto-report-errors: false
 ```
 
-Note: Previously collected data is not deleted from Rollbar. Contact a QuickShop-Hikari developer to request its removal.
+:::note
+Disabling automatic error reporting prevents future automatic reports. Previously submitted information is not automatically removed from Rollbar.
+:::
 
-## Paste
+## Paste Service
 
-When you create a paste with `/quickshop paste`, your data is uploaded to [Lucko's Bytebin](https://bytebin.lucko.me/).  
-To avoid uploading data, create a local paste with `/quickshop paste file`; it will be saved to your local disk instead.
+When you execute:
 
-The Paste Viewer is hosted on GitHub Pages and accesses uploaded data through a Cloudflare Worker.
+```text
+/quickshop paste
+```
 
-Sensitive data is redacted while the paste is generated. Do not send your paste to anyone you do not trust.
+QuickShop-Hikari creates diagnostic information that can be used for troubleshooting.
+
+An online paste is uploaded to [Lucko's Bytebin](https://bytebin.lucko.me/).
+
+If you do not want the diagnostic information uploaded to an external paste service, use:
+
+```text
+/quickshop paste file
+```
+
+This creates the paste locally instead.
+
+QuickShop-Hikari attempts to censor sensitive information while generating diagnostic pastes. You should still review diagnostic information and only share paste links with people you trust.
 
 ## Updater
 
-To check for updates, QuickShop-Hikari sends a request to CodeMC.io's Nexus service.  
+QuickShop-Hikari can contact an external update provider to determine whether a newer version of the plugin is available.
 
-To disable the update checker, adjust the configuration as follows:
+The updater can be disabled in `config.yml`:
 
 ```yaml
-#Should QS be allowed to check for updates?
+# Should QS be allowed to check for updates?
+updater: false
+```
+
+When disabled, QuickShop-Hikari does not perform its normal automatic update checks.
+
+### Updater Providers
+
+Starting with QuickShop-Hikari 6.3.0.0, the updater is provider-based instead of being tied exclusively to the CodeMC Nexus service.
+
+The active update source is configured with:
+
+```yaml
+# The source to check for updates on.
+# Allowed values: "nexus", "modrinth"
+# Nexus shows snapshots and releases, modrinth shows releases only.
+updater-source: "modrinth"
+```
+
+Available providers are:
+
+| Provider | Purpose |
+| --- | --- |
+| `modrinth` | Checks QuickShop-Hikari releases through the Modrinth API. |
+| `nexus` | Checks the Nexus repository and can include snapshots and releases. |
+
+:::info
+The selected updater provider determines which external service QuickShop-Hikari contacts while checking for updates.
+:::
+
+### Modrinth
+
+When:
+
+```yaml
+updater-source: "modrinth"
+```
+
+QuickShop-Hikari uses the Modrinth API to retrieve version metadata.
+
+The updater uses semantic-version comparison to determine the latest available release and latest stable release.
+
+Modrinth provides release versions only through this updater provider.
+
+### Nexus
+
+When:
+
+```yaml
+updater-source: "nexus"
+```
+
+QuickShop-Hikari uses the Nexus update provider.
+
+Unlike the Modrinth provider, Nexus can expose both snapshot and release versions.
+
+### Update Metadata Cache
+
+The centralized updater caches retrieved update metadata for one hour.
+
+This reduces repeated requests to the configured update service when multiple parts of QuickShop-Hikari request update information during that period.
+
+### Diagnostic Paste Information
+
+QuickShop-Hikari's paste output includes the active update provider.
+
+This helps maintainers understand whether an installation is using:
+
+```text
+modrinth
+```
+
+or:
+
+```text
+nexus
+```
+
+when reviewing diagnostic information.
+
+### What Changed in 6.3.0.0
+
+The 6.3.0.0 updater refactor introduced:
+
+- Modrinth update-source support;
+- the UpdateProvider interface for extensible update sources;
+- a centralized UpdateManager;
+- a one-hour metadata cache;
+- unified semantic-version comparison;
+- provider information in diagnostic paste output;
+- provider-based update URLs;
+- migration of UpdateWatcher to the generic updater system.
+
+From a privacy perspective, the important change is that update checks are no longer necessarily sent to the Nexus service. The external service contacted for update metadata depends on the configured `updater-source`.
+
+To prevent QuickShop-Hikari from performing update checks entirely, disable the updater:
+
+```yaml
 updater: false
 ```
