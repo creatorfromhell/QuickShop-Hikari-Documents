@@ -43,7 +43,7 @@ const quickLinks = [
 ];
 
 export default function Home() {
-  const logo = useBaseUrl('/img/quickshop-hikari-logo.webp');
+  const logo = useBaseUrl('img/quickshop-hikari-logo.webp');
 
   return (
     <Layout
@@ -103,7 +103,6 @@ export default function Home() {
                 <img src={logo} alt="QuickShop Hikari" />
               </div>
 
-              <div className={styles.visualTag}>DOCS</div>
               <div className={styles.visualSparkleOne} aria-hidden="true">✦</div>
               <div className={styles.visualSparkleTwo} aria-hidden="true">✦</div>
             </div>
