@@ -13,6 +13,7 @@ If you want help us improve the page, please switch to `American English` and cl
 Node.js `22.23.4+`, `24.22.1+` or `26.12.1+`. Older releases of these lines are affected by the
 [October 2026 Node.js security advisories](https://nodejs.org/en/blog/vulnerability/) and are not supported.
 
+
 ## Installation
 
 ```bash
